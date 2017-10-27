@@ -8,22 +8,70 @@
 
 /* Begin PBXBuildFile section */
 		8070A3E51FA31B57004386C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070A3E41FA31B57004386C5 /* AppDelegate.swift */; };
-		8070A3E71FA31B57004386C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070A3E61FA31B57004386C5 /* ViewController.swift */; };
 		8070A3EA1FA31B57004386C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070A3E81FA31B57004386C5 /* Main.storyboard */; };
 		8070A3ED1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8070A3EB1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld */; };
 		8070A3EF1FA31B57004386C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8070A3EE1FA31B57004386C5 /* Assets.xcassets */; };
 		8070A3F21FA31B57004386C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070A3F01FA31B57004386C5 /* LaunchScreen.storyboard */; };
+		807A36D81FA32141003E52F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 807A36D71FA32140003E52F6 /* GoogleService-Info.plist */; };
+		807A36DD1FA330C1003E52F6 /* ComicsBookPainting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36DC1FA330C1003E52F6 /* ComicsBookPainting.swift */; };
+		807A36DF1FA33114003E52F6 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36DE1FA33114003E52F6 /* UserApp.swift */; };
+		807A36E11FA33158003E52F6 /* ComicBooksPaintingsTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E01FA33158003E52F6 /* ComicBooksPaintingsTour.swift */; };
+		807A36E41FA331CF003E52F6 /* WebServiceControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E31FA331CF003E52F6 /* WebServiceControler.swift */; };
+		807A36E61FA33202003E52F6 /* ExtentionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E51FA33202003E52F6 /* ExtentionUIViewController.swift */; };
+		807A36E81FA33237003E52F6 /* LocationServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E71FA33237003E52F6 /* LocationServiceController.swift */; };
+		807A36EA1FA33289003E52F6 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E91FA33289003E52F6 /* FirebaseController.swift */; };
+		807A36EC1FA3339A003E52F6 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */; };
+		807A36EE1FA333D8003E52F6 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */; };
+		807A36F01FA33424003E52F6 /* ComicTourInitiationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */; };
+		807A36F21FA33470003E52F6 /* UserInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */; };
+		807A36F41FA334B7003E52F6 /* UserInformationUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */; };
+		807A36F61FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */; };
+		807A36F81FA33527003E52F6 /* ComicsPaintingMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F71FA33527003E52F6 /* ComicsPaintingMapViewController.swift */; };
+		807A36FA1FA33576003E52F6 /* ComicsBookPaintingDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F91FA33576003E52F6 /* ComicsBookPaintingDetailTableViewController.swift */; };
+		807A36FC1FA335AC003E52F6 /* ComicTourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36FB1FA335AC003E52F6 /* ComicTourTableViewController.swift */; };
+		807A36FE1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36FD1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift */; };
+		807A37001FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36FF1FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift */; };
+		807A37021FA3363F003E52F6 /* ListOfPaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37011FA3363F003E52F6 /* ListOfPaintingTableViewCell.swift */; };
+		807A37041FA3366D003E52F6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37031FA3366D003E52F6 /* GameViewController.swift */; };
+		807A37061FA336A9003E52F6 /* TakeAPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */; };
+		807A37081FA336E0003E52F6 /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37071FA336E0003E52F6 /* VictoryViewController.swift */; };
+		E37D055EE75E74AD5F24FFB0 /* Pods_BrusselsComicBookPaintingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrusselsComicBookPaintingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3188618F7E11E6BD0781FE65 /* Pods-BrusselsComicBookPaintingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.release.xcconfig"; sourceTree = "<group>"; };
+		5E252FCB79D626112D9BB387 /* Pods-BrusselsComicBookPaintingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8070A3E11FA31B57004386C5 /* BrusselsComicBookPaintingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrusselsComicBookPaintingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070A3E41FA31B57004386C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8070A3E61FA31B57004386C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8070A3E91FA31B57004386C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8070A3EC1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrusselsComicBookPaintingApp.xcdatamodel; sourceTree = "<group>"; };
 		8070A3EE1FA31B57004386C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8070A3F11FA31B57004386C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8070A3F31FA31B57004386C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807A36D71FA32140003E52F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		807A36DC1FA330C1003E52F6 /* ComicsBookPainting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsBookPainting.swift; sourceTree = "<group>"; };
+		807A36DE1FA33114003E52F6 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
+		807A36E01FA33158003E52F6 /* ComicBooksPaintingsTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicBooksPaintingsTour.swift; sourceTree = "<group>"; };
+		807A36E31FA331CF003E52F6 /* WebServiceControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceControler.swift; sourceTree = "<group>"; };
+		807A36E51FA33202003E52F6 /* ExtentionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionUIViewController.swift; sourceTree = "<group>"; };
+		807A36E71FA33237003E52F6 /* LocationServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceController.swift; sourceTree = "<group>"; };
+		807A36E91FA33289003E52F6 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
+		807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTourInitiationViewController.swift; sourceTree = "<group>"; };
+		807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewController.swift; sourceTree = "<group>"; };
+		807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationUITableViewCell.swift; sourceTree = "<group>"; };
+		807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listOfComicBookPaintnigsTourTableViewCell.swift; sourceTree = "<group>"; };
+		807A36F71FA33527003E52F6 /* ComicsPaintingMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsPaintingMapViewController.swift; sourceTree = "<group>"; };
+		807A36F91FA33576003E52F6 /* ComicsBookPaintingDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsBookPaintingDetailTableViewController.swift; sourceTree = "<group>"; };
+		807A36FB1FA335AC003E52F6 /* ComicTourTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTourTableViewController.swift; sourceTree = "<group>"; };
+		807A36FD1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicBookPaintingTourMapViewController.swift; sourceTree = "<group>"; };
+		807A36FF1FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPaintingTourTableViewController.swift; sourceTree = "<group>"; };
+		807A37011FA3363F003E52F6 /* ListOfPaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPaintingTableViewCell.swift; sourceTree = "<group>"; };
+		807A37031FA3366D003E52F6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAPictureViewController.swift; sourceTree = "<group>"; };
+		807A37071FA336E0003E52F6 /* VictoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +79,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37D055EE75E74AD5F24FFB0 /* Pods_BrusselsComicBookPaintingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E95199CCC253275408AB6BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E252FCB79D626112D9BB387 /* Pods-BrusselsComicBookPaintingApp.debug.xcconfig */,
+				3188618F7E11E6BD0781FE65 /* Pods-BrusselsComicBookPaintingApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		661E712DC1C1C86F22C09C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8070A3D81FA31B56004386C5 = {
 			isa = PBXGroup;
 			children = (
 				8070A3E31FA31B57004386C5 /* BrusselsComicBookPaintingApp */,
 				8070A3E21FA31B57004386C5 /* Products */,
+				3E95199CCC253275408AB6BD /* Pods */,
+				661E712DC1C1C86F22C09C4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +124,69 @@
 		8070A3E31FA31B57004386C5 /* BrusselsComicBookPaintingApp */ = {
 			isa = PBXGroup;
 			children = (
+				807A36E21FA33175003E52F6 /* tool */,
 				8070A3E41FA31B57004386C5 /* AppDelegate.swift */,
-				8070A3E61FA31B57004386C5 /* ViewController.swift */,
-				8070A3E81FA31B57004386C5 /* Main.storyboard */,
+				807A36DA1FA32A93003E52F6 /* UI */,
+				807A36D91FA32A88003E52F6 /* model */,
 				8070A3EE1FA31B57004386C5 /* Assets.xcassets */,
-				8070A3F01FA31B57004386C5 /* LaunchScreen.storyboard */,
 				8070A3F31FA31B57004386C5 /* Info.plist */,
 				8070A3EB1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld */,
+				807A36D71FA32140003E52F6 /* GoogleService-Info.plist */,
 			);
 			path = BrusselsComicBookPaintingApp;
+			sourceTree = "<group>";
+		};
+		807A36D91FA32A88003E52F6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				807A36DC1FA330C1003E52F6 /* ComicsBookPainting.swift */,
+				807A36DE1FA33114003E52F6 /* UserApp.swift */,
+				807A36E01FA33158003E52F6 /* ComicBooksPaintingsTour.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		807A36DA1FA32A93003E52F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8070A3E81FA31B57004386C5 /* Main.storyboard */,
+				8070A3F01FA31B57004386C5 /* LaunchScreen.storyboard */,
+				807A36DB1FA32A9B003E52F6 /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		807A36DB1FA32A9B003E52F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */,
+				807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */,
+				807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */,
+				807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */,
+				807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */,
+				807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */,
+				807A36F71FA33527003E52F6 /* ComicsPaintingMapViewController.swift */,
+				807A36F91FA33576003E52F6 /* ComicsBookPaintingDetailTableViewController.swift */,
+				807A36FB1FA335AC003E52F6 /* ComicTourTableViewController.swift */,
+				807A36FD1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift */,
+				807A36FF1FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift */,
+				807A37011FA3363F003E52F6 /* ListOfPaintingTableViewCell.swift */,
+				807A37031FA3366D003E52F6 /* GameViewController.swift */,
+				807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */,
+				807A37071FA336E0003E52F6 /* VictoryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		807A36E21FA33175003E52F6 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				807A36E31FA331CF003E52F6 /* WebServiceControler.swift */,
+				807A36E51FA33202003E52F6 /* ExtentionUIViewController.swift */,
+				807A36E71FA33237003E52F6 /* LocationServiceController.swift */,
+				807A36E91FA33289003E52F6 /* FirebaseController.swift */,
+			);
+			name = tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8070A3F61FA31B57004386C5 /* Build configuration list for PBXNativeTarget "BrusselsComicBookPaintingApp" */;
 			buildPhases = (
+				362606211632EC9FBF185B44 /* [CP] Check Pods Manifest.lock */,
 				8070A3DD1FA31B56004386C5 /* Sources */,
 				8070A3DE1FA31B56004386C5 /* Frameworks */,
 				8070A3DF1FA31B56004386C5 /* Resources */,
+				E4AA78A062FD0DBFDED157F2 /* [CP] Embed Pods Frameworks */,
+				72545BC9DD7A7AE9C719DB4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8070A3F21FA31B57004386C5 /* LaunchScreen.storyboard in Resources */,
+				807A36D81FA32141003E52F6 /* GoogleService-Info.plist in Resources */,
 				8070A3EF1FA31B57004386C5 /* Assets.xcassets in Resources */,
 				8070A3EA1FA31B57004386C5 /* Main.storyboard in Resources */,
 			);
@@ -134,14 +260,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		362606211632EC9FBF185B44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrusselsComicBookPaintingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72545BC9DD7A7AE9C719DB4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4AA78A062FD0DBFDED157F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8070A3DD1FA31B56004386C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8070A3E71FA31B57004386C5 /* ViewController.swift in Sources */,
+				807A36F61FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift in Sources */,
+				807A36FE1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift in Sources */,
+				807A37001FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift in Sources */,
+				807A36EA1FA33289003E52F6 /* FirebaseController.swift in Sources */,
+				807A36E81FA33237003E52F6 /* LocationServiceController.swift in Sources */,
+				807A36EC1FA3339A003E52F6 /* ConnectionViewController.swift in Sources */,
+				807A37021FA3363F003E52F6 /* ListOfPaintingTableViewCell.swift in Sources */,
+				807A36FA1FA33576003E52F6 /* ComicsBookPaintingDetailTableViewController.swift in Sources */,
+				807A36DF1FA33114003E52F6 /* UserApp.swift in Sources */,
+				807A36F81FA33527003E52F6 /* ComicsPaintingMapViewController.swift in Sources */,
+				807A36FC1FA335AC003E52F6 /* ComicTourTableViewController.swift in Sources */,
+				807A36E61FA33202003E52F6 /* ExtentionUIViewController.swift in Sources */,
+				807A36F21FA33470003E52F6 /* UserInformationTableViewController.swift in Sources */,
+				807A37081FA336E0003E52F6 /* VictoryViewController.swift in Sources */,
+				807A36E41FA331CF003E52F6 /* WebServiceControler.swift in Sources */,
 				8070A3E51FA31B57004386C5 /* AppDelegate.swift in Sources */,
 				8070A3ED1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld in Sources */,
+				807A36DD1FA330C1003E52F6 /* ComicsBookPainting.swift in Sources */,
+				807A36E11FA33158003E52F6 /* ComicBooksPaintingsTour.swift in Sources */,
+				807A36F01FA33424003E52F6 /* ComicTourInitiationViewController.swift in Sources */,
+				807A36EE1FA333D8003E52F6 /* NewUserTableViewController.swift in Sources */,
+				807A37041FA3366D003E52F6 /* GameViewController.swift in Sources */,
+				807A36F41FA334B7003E52F6 /* UserInformationUITableViewCell.swift in Sources */,
+				807A37061FA336A9003E52F6 /* TakeAPictureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +493,13 @@
 		};
 		8070A3F71FA31B57004386C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E252FCB79D626112D9BB387 /* Pods-BrusselsComicBookPaintingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT9SP3QQS5;
 				INFOPLIST_FILE = BrusselsComicBookPaintingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.jeremysCompany.BrusselsComicBookPaintingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,11 +510,13 @@
 		};
 		8070A3F81FA31B57004386C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3188618F7E11E6BD0781FE65 /* Pods-BrusselsComicBookPaintingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT9SP3QQS5;
 				INFOPLIST_FILE = BrusselsComicBookPaintingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.jeremysCompany.BrusselsComicBookPaintingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
