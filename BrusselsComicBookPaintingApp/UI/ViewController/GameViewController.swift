@@ -40,14 +40,16 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     
     
     func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation){
-        let distanceFromThegameComicBookPainting = gameComicBookPaintingLocation.distance(from: playerCurrentLocation)
+        let totalDistanceDiv1000 = gameComicBookPaintingLocation.distance(from: playerCurrentLocation)/1000
+        
+        let distanceFromThegameComicBookPainting = (totalDistanceDiv1000*100).rounded()/100
         
         AppDelegate.DisplayInfo(distance: distanceFromThegameComicBookPainting, fromNewLocation: playerCurrentLocation)
         
         let gameComicBookPaintingDistanceText = " you are at \(distanceFromThegameComicBookPainting) km from the painting"
         self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
         
-        if distanceFromThegameComicBookPainting < 6{
+        if distanceFromThegameComicBookPainting < 0.06{
             self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
         }
     }

@@ -12,7 +12,6 @@ import SwiftyJSON
 import RealmSwift
 
 class ComicsBookPainting : Object {
-    @objc dynamic var comicsPaintingID : Int = 0
     @objc dynamic var comicsPaintingTitle : String = ""
     @objc dynamic var comicsPaintingAuthor : String = ""
     @objc dynamic var comicsPaintingYear : Int = 0

@@ -18,11 +18,11 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     var ListOfAllComicPaintings : [ComicsBookPainting] = []
     var currentUser : UserApp = UserApp()
     var numberOfComicBookPainting : Int = 5
-    var numberOfKilometerRadius : Double = 500.00
+    var numberOfKilometerRadius : Double = 1000.00
     var distanceBetweenTwoComicBookPainting : Double = 500.00
     var startingPoint = CLLocation(latitude: 50.838042, longitude: 4.347661)
     let locationManager = CLLocationManager()
-    var playerCurentLocation = CLLocation()
+    var currentPlayerLocation = CLLocation()
     var totalDistance = 0.00
     let realm = try! Realm()
     
@@ -51,7 +51,7 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         case 2:
             startingPoint = CLLocation(latitude: 50.848553, longitude: 4.350578)
         case 3:
-            startingPoint = playerCurentLocation
+            startingPoint = currentPlayerLocation
         default :
             break
         }
@@ -63,9 +63,9 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     @IBAction func numberOfKilimetersRadiusSegmentControl(_ sender: UISegmentedControl) {
         switch (sender.selectedSegmentIndex) {
         case 1:
-            numberOfKilometerRadius = 1000.00
-        case 2:
             numberOfKilometerRadius = 2000.00
+        case 2:
+            numberOfKilometerRadius = 3000.00
         case 3:
             numberOfKilometerRadius = 4000.00
         default:
@@ -91,12 +91,6 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         performSegue(withIdentifier: "goToComicBookTourSegue", sender: sender)
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let currentLocation = locations.first{
-            playerCurentLocation = currentLocation
-            locationManager.stopUpdatingLocation()
-        }
-    }
     
     // MARK: - custum fonction
     
@@ -165,12 +159,13 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if realm.isEmpty{
-            
+        guard let currentLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation else {return}
+        self.currentPlayerLocation = currentLocation
+        
+        NotificationCenter.default.addObserver(forName: .onUserPositionChanged, object: nil, queue: OperationQueue.main) { (notification) in
+            if let newLocation = notification.userInfo?["lastLocation"] as? CLLocation{
+                self.currentPlayerLocation = newLocation
+            }
         }
     }
     

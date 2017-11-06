@@ -24,6 +24,16 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>The Application need Acces to your Location to locate the Paintings near by.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>The Application need Acces to your Location to locate the Paintings near by.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The Application need Acces to your Location to locate the Paintings near by</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -81,7 +81,6 @@ class FirebaseController {
                     let userFistName = userJson["firstName"].string,
                     let userAddress = userJson["address"].string else {return}
                 let listOfCOmicBookPaintingsToursJson  = userJson["comicBookPaintingsTour"]
-                print(listOfCOmicBookPaintingsToursJson)
                 let listOfComicBookPaintingsTours = self.getListComicBookPaintingsTourFromBasicJSon(listOfComicsPaintingsToursJsonArray: listOfCOmicBookPaintingsToursJson)
                 let userApp = UserApp(email: userEmail, firstName: userFistName, lastName: userLastName, address: userAddress, listOfComicBookPaintingsTours : listOfComicBookPaintingsTours)
                 handler(userApp)
@@ -94,7 +93,6 @@ class FirebaseController {
         let numberOfComicBookPaintingsTour = listOfComicsPaintingsToursJsonArray.count
         for i in 0 ..< numberOfComicBookPaintingsTour{
             let comicBookPaintingTourJson : JSON = listOfComicsPaintingsToursJsonArray[i]
-            print(comicBookPaintingTourJson)
             let comicBookPaintingTour  : ComicBooksPaintingsTour = getComicBookPaintingsTourFromJson(comicBookPaintingTourJson : comicBookPaintingTourJson)
             listOfComicBookPaintingsTour.append(comicBookPaintingTour)
         }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NHu-yE-fRf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +14,7 @@
         <!--Add A New User-->
         <scene sceneID="X3D-PQ-VBV">
             <objects>
-                <tableViewController id="aDL-Bg-wSG" customClass="NewUserTableViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aDL-Bg-wSG" customClass="NewUserTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="6" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ncx-wR-Loa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +227,7 @@
         <!--Brussels Comics Painting initiation-->
         <scene sceneID="Np8-04-qVe">
             <objects>
-                <viewController storyboardIdentifier="comicBookTourInitiationVC" automaticallyAdjustsScrollViewInsets="NO" id="8HX-s2-P77" customClass="ComicTourInitiationViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="comicBookTourInitiationVC" automaticallyAdjustsScrollViewInsets="NO" id="8HX-s2-P77" customClass="ComicTourInitiationViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="19o-dA-fsi"/>
                         <viewControllerLayoutGuide type="bottom" id="VZC-ud-L1T"/>
@@ -243,7 +244,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-8v-fpR">
                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="101.5"/>
-                                                <string key="text">Welcome to The Brussels comics painting Tour Application please click on play game to start the game you will have to choose the starting point and the number of paintong you want to find:</string>
+                                                <string key="text">Welcome to The Brussels comics painting Tour Initiation please choose the starting point and the number of paintong you want to find, your starting location and the distance between painitng:</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -302,9 +303,9 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3rC-FQ-9UG">
                                                 <rect key="frame" x="0.0" y="444.5" width="355" height="29"/>
                                                 <segments>
-                                                    <segment title="0.5"/>
                                                     <segment title="1"/>
                                                     <segment title="2"/>
+                                                    <segment title="3"/>
                                                     <segment title="4"/>
                                                 </segments>
                                                 <connections>
@@ -394,7 +395,7 @@
         <!--Full Comics Books Painting Map-->
         <scene sceneID="cD7-d5-cPe">
             <objects>
-                <viewController id="cwh-cJ-pKq" customClass="ComicsPaintingMapViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cwh-cJ-pKq" customClass="ComicsPaintingMapViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3jC-Fe-1Tq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,7 +431,7 @@
         <!--User Information-->
         <scene sceneID="mjr-bD-js5">
             <objects>
-                <tableViewController id="5ai-Vy-15l" customClass="UserInformationTableViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="5ai-Vy-15l" customClass="UserInformationTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C52-mn-jIx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,7 +448,7 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInformationIdentifier" id="azm-I9-YXA" customClass="UserInformationUITableViewCell" customModule="ComicsBooksPaintingTour" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInformationIdentifier" id="azm-I9-YXA" customClass="UserInformationUITableViewCell" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="azm-I9-YXA" id="N0I-Zo-lqE">
@@ -486,7 +487,7 @@
                                     <outlet property="userInformationValueLabel" destination="if2-iO-mq3" id="Vd2-4p-Sht"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="comicBookPaintingTourNameIdentifier" id="vAJ-YX-GT9" customClass="listOfComicBookPaintnigsTourTableViewCell" customModule="ComicsBooksPaintingTour" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="comicBookPaintingTourNameIdentifier" id="vAJ-YX-GT9" customClass="listOfComicBookPaintnigsTourTableViewCell" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAJ-YX-GT9" id="wjY-2u-cGG">
@@ -528,7 +529,7 @@
         <!--Comic book Tour-->
         <scene sceneID="wcO-9M-0MK">
             <objects>
-                <tableViewController id="S09-Wu-aoj" customClass="ComicTourTableViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="S09-Wu-aoj" customClass="ComicTourTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pd2-fN-Z4L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -739,13 +740,13 @@
         <!--List Of Painting Tour Table View Controller-->
         <scene sceneID="E5z-YP-NVM">
             <objects>
-                <tableViewController storyboardIdentifier="listOfComicBookPaintingsTBVC" id="bqT-W6-qFV" customClass="ListOfPaintingTourTableViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="listOfComicBookPaintingsTBVC" id="bqT-W6-qFV" customClass="ListOfPaintingTourTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RUi-tv-Z4F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListOfPaintingTableViewCell" rowHeight="175" id="hK6-64-0G8" customClass="ListOfPaintingTableViewCell" customModule="ComicsBooksPaintingTour" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListOfPaintingTableViewCell" rowHeight="175" id="hK6-64-0G8" customClass="ListOfPaintingTableViewCell" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hK6-64-0G8" id="ayV-uP-d3c">
@@ -803,7 +804,7 @@
         <!--titre-->
         <scene sceneID="N6j-rM-e3B">
             <objects>
-                <viewController id="JOb-6u-ox9" customClass="GameViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JOb-6u-ox9" customClass="GameViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fai-X4-aAS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -908,7 +909,7 @@
         <!--Victory!!!!!!-->
         <scene sceneID="ki5-Y1-O6j">
             <objects>
-                <viewController id="xIe-Bf-Fcn" customClass="VictoryViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xIe-Bf-Fcn" customClass="VictoryViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reK-nP-6Eg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1001,7 +1002,7 @@
         <!--Take a Pciture-->
         <scene sceneID="1zE-Fs-dAR">
             <objects>
-                <viewController id="Thp-vK-Ovx" customClass="TakeAPictureViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Thp-vK-Ovx" customClass="TakeAPictureViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XM-Vf-z7w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1107,7 +1108,7 @@
         <!--ComicBook Painting Tour  Map-->
         <scene sceneID="Atf-dg-Hib">
             <objects>
-                <viewController id="QVX-Hw-EXN" customClass="ComicBookPaintingTourMapViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QVX-Hw-EXN" customClass="ComicBookPaintingTourMapViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cxE-yS-f72">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1135,7 +1136,7 @@
         <!--comic book painting Detail-->
         <scene sceneID="SpY-RC-B29">
             <objects>
-                <tableViewController id="dfg-RM-KOn" customClass="ComicsBookPaintingDetailTableViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dfg-RM-KOn" customClass="ComicsBookPaintingDetailTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a3B-Mg-BnJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1275,7 +1276,7 @@
         <!--Brussel Comics Book Painting Tour-->
         <scene sceneID="zn2-lo-QSl">
             <objects>
-                <viewController storyboardIdentifier="connectionVC" id="XrU-ZJ-GWG" customClass="ConnectionViewController" customModule="ComicsBooksPaintingTour" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="connectionVC" id="XrU-ZJ-GWG" customClass="ConnectionViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NU9-NZ-VPl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

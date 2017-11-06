@@ -126,7 +126,9 @@ class ComicTourTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         orderTheListOfComicBookPaintings()
-        comicBookTourPaintingInfoLabel.text = "The comicbook Painting tour has \(playerListOfComicBookPaintings.count) Painting and the total distance of the tour is \(totalDistance/1000) km."
+        let totalDistanceDiv1000 = totalDistance/1000
+        let totalDistanceToDisplay = (totalDistanceDiv1000*100).rounded()/100
+        comicBookTourPaintingInfoLabel.text = "The comicbook Painting tour has \(playerListOfComicBookPaintings.count) Painting and the total distance of the tour is \(totalDistanceToDisplay) km."
     }
     
     override func didReceiveMemoryWarning() {
