@@ -38,31 +38,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     
     
     
-    func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation, gameComicBookPainting : ComicsBookPainting){
-        let gameComicBookPaintingLocation = CLLocation(latitude: gameComicBookPainting.lat, longitude: gameComicBookPainting.lng)
-        var walkingDistanceToThePainting = 0.00
-        let directionRequest = MKDirectionsRequest()
-        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: playerCurrentLocation.coordinate))
-        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: gameComicBookPaintingLocation.coordinate))
-        directionRequest.transportType = .walking
-        let directions = MKDirections(request: directionRequest)
-        directions.calculate(completionHandler: { (response, error) in
-            guard let route = response?.routes.first else{return}
-            walkingDistanceToThePainting = route.distance
-            
-            let walkingDistanceToThePaintingDiv1000 = walkingDistanceToThePainting/1000
-            let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*100).rounded()/100
-            AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
-            
-            let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
-            self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
-            
-            if walkingDistanceToThePaintingRounded < 0.06{
-                self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
-            }
-        })
-        
-    }
+    
     
     @IBOutlet weak var gameNavigationTitle: UINavigationItem!
     @IBOutlet weak var comicBookPaintingImageView: UIImageView!
@@ -130,6 +106,32 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
             gameComicBookPaintingAdressText = "\n the address of the game comic book painting is \n \(addressOfTheGameComicBookPaintng)"
             self.comicBookPaintingInfoAdressLabel.text = gameComicBookPaintingAdressText
         }
+    }
+    
+    func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation, gameComicBookPainting : ComicsBookPainting){
+        let gameComicBookPaintingLocation = CLLocation(latitude: gameComicBookPainting.lat, longitude: gameComicBookPainting.lng)
+        var walkingDistanceToThePainting = 0.00
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: playerCurrentLocation.coordinate))
+        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: gameComicBookPaintingLocation.coordinate))
+        directionRequest.transportType = .walking
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate(completionHandler: { (response, error) in
+            guard let route = response?.routes.first else{return}
+            walkingDistanceToThePainting = route.distance
+            
+            let walkingDistanceToThePaintingDiv1000 = walkingDistanceToThePainting/1000
+            let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*100).rounded()/100
+            AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
+            
+            let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
+            self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+            
+            if walkingDistanceToThePaintingRounded < 0.06{
+                self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
+            }
+        })
+        
     }
     
     func gameAlerContinuePicture(title: String, andMessage: String){
