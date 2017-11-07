@@ -18,11 +18,10 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     var gameComicBookPainting : ComicsBookPainting = ComicsBookPainting()
     var gameComicBookPaintingIndex : Int = 0
     var locationManager = CLLocationManager()
-    var gameComicBookPaintingLocation : CLLocation = CLLocation()
     
     var currentPlayerLocation: CLLocation?{
         didSet{
-            playTheGameAndGetTheDisanceTF(playerCurrentLocation: self.currentPlayerLocation!)
+            playTheGameAndGetTheDisanceTF(playerCurrentLocation: self.currentPlayerLocation!, gameComicBookPainting: gameComicBookPainting)
         }
     }
     
@@ -39,19 +38,30 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     
     
     
-    func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation){
-        let totalDistanceDiv1000 = gameComicBookPaintingLocation.distance(from: playerCurrentLocation)/1000
+    func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation, gameComicBookPainting : ComicsBookPainting){
+        let gameComicBookPaintingLocation = CLLocation(latitude: gameComicBookPainting.lat, longitude: gameComicBookPainting.lng)
+        var walkingDistanceToThePainting = 0.00
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: playerCurrentLocation.coordinate))
+        directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: gameComicBookPaintingLocation.coordinate))
+        directionRequest.transportType = .walking
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate(completionHandler: { (response, error) in
+            guard let route = response?.routes.first else{return}
+            walkingDistanceToThePainting = route.distance
+            
+            let walkingDistanceToThePaintingDiv1000 = walkingDistanceToThePainting/1000
+            let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*100).rounded()/100
+            AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
+            
+            let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
+            self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+            
+            if walkingDistanceToThePaintingRounded < 0.06{
+                self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
+            }
+        })
         
-        let distanceFromThegameComicBookPainting = (totalDistanceDiv1000*100).rounded()/100
-        
-        AppDelegate.DisplayInfo(distance: distanceFromThegameComicBookPainting, fromNewLocation: playerCurrentLocation)
-        
-        let gameComicBookPaintingDistanceText = " you are at \(distanceFromThegameComicBookPainting) km from the painting"
-        self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
-        
-        if distanceFromThegameComicBookPainting < 0.06{
-            self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
-        }
     }
     
     @IBOutlet weak var gameNavigationTitle: UINavigationItem!
@@ -62,6 +72,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     @IBAction func goTheNextComicBookPainting(_ sender: Any) {
         gameComicBookPaintingIndex += 1
         continueTheGame(gameComicBookPaintingIndex : gameComicBookPaintingIndex)
+        playTheGameAndGetTheDisanceTF(playerCurrentLocation : self.currentPlayerLocation!, gameComicBookPainting : gameComicBookPainting)
     }
     
     @IBAction func navigationGuidanceButton(_ sender: Any) {
@@ -84,14 +95,14 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     func continueTheGame(gameComicBookPaintingIndex : Int){
         if gameComicBookPaintingIndex < listOfComicBookPaintingOfTheTour.count{
             gameComicBookPainting = listOfComicBookPaintingOfTheTour[gameComicBookPaintingIndex]
-            setDifferentViewElementOfTheGame(gameComicBookPainting: gameComicBookPainting, gameComicBookPaintingLocation: gameComicBookPaintingLocation)
+            setDifferentViewElementOfTheGame(gameComicBookPainting: gameComicBookPainting)
         }else{
             performSegue(withIdentifier: "victorySegue", sender: view)
         }
     }
     
     
-    func setDifferentViewElementOfTheGame (gameComicBookPainting : ComicsBookPainting, gameComicBookPaintingLocation : CLLocation){
+    func setDifferentViewElementOfTheGame (gameComicBookPainting : ComicsBookPainting){
         
         let gameComcBookPaintingTitle = gameComicBookPainting.comicsPaintingTitle
         let gameComcBookPaintingImageUrlOpt = gameComicBookPainting.comicsPaintingImageURL
@@ -152,9 +163,8 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
         locationManager.startUpdatingLocation()
         
         gameComicBookPainting = listOfComicBookPaintingOfTheTour[0]
-        gameComicBookPaintingLocation = CLLocation(latitude: gameComicBookPainting.lat, longitude: gameComicBookPainting.lng)
         
-        setDifferentViewElementOfTheGame(gameComicBookPainting: gameComicBookPainting, gameComicBookPaintingLocation : gameComicBookPaintingLocation)
+        setDifferentViewElementOfTheGame(gameComicBookPainting: gameComicBookPainting)
         
     }
     

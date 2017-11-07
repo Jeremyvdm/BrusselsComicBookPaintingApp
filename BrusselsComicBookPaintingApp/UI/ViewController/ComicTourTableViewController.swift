@@ -98,18 +98,34 @@ class ComicTourTableViewController: UITableViewController {
         return listOfComicBookPaintingLocation
     }
     
-    // will calculate the total distance of the tour by using a list of comic book location
-    func calculateTheTotalDistanceOfTheTour(listOfComicBookPaintingLocation : [CLLocation]) -> Double{
-        var totalTourDisatance = 0.0
+    private func createTheTextForDistanceLabel(listOfComicBookPaintingLocation : [CLLocation]){
         var comicBookPaintingLocationA = listOfComicBookPaintingLocation[0]
-        for index in 1 ..< listOfComicBookPaintingLocation.count{
-            let comicBookPaintingLocationB = listOfComicBookPaintingLocation[index]
-            let distanceBetwwenTheTwoComicBooPainting = comicBookPaintingLocationA.distance(from: comicBookPaintingLocationB)
-            totalTourDisatance += distanceBetwwenTheTwoComicBooPainting
+        var totalTourDistance : Double = 0.00
+        var count = 0
+        for comicBookPaintingLocationB in listOfComicBookPaintingLocation[1...listOfComicBookPaintingLocation.count-1]{
+            let directionRequest = MKDirectionsRequest()
+            directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationA.coordinate))
+            directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationB.coordinate))
+            directionRequest.transportType = .walking
+            let directions = MKDirections(request: directionRequest)
+            directions.calculate(completionHandler: { (response, error) in
+                guard let route = response?.routes.first else{return}
+                totalTourDistance += route.distance
+                count += 1
+                if(count == self.playerListOfComicBookPaintings.count - 1){
+                    let totalDistanceDiv1000 = totalTourDistance/1000
+                    let totalDistanceToDisplay = (totalDistanceDiv1000*100).rounded()/100
+                    self.comicBookTourPaintingInfoLabel.text = "The comicbook Painting tour has \(self.playerListOfComicBookPaintings.count) Painting and the total distance of the tour is \(totalDistanceToDisplay) km."
+                }
+            })
+            
             comicBookPaintingLocationA = comicBookPaintingLocationB
+            
+                
         }
-        return totalTourDisatance
     }
+    
+    
     
     // will create the list of the comic book painting that will be order by distance and calculate the total distance of the tour
     func orderTheListOfComicBookPaintings(){
@@ -119,16 +135,13 @@ class ComicTourTableViewController: UITableViewController {
         let orderListOfComicBookPaintingLocationServiceController = orderTheComicBookPaintingByDistance(fromStartPoint: startPointLocation, betweenComicBookPaintingLocation: listOfComicBookPaintingLocationServiceController, limitTo: limit, course: [])
         orderPlayerListOfComicBookPaintings = orderThePlayerListOfComicBookPaintings(listOfComicBookPaintingsLocationServiceController: orderListOfComicBookPaintingLocationServiceController, listOfComicBookPaintings: playerListOfComicBookPaintings)
         let listOfComicBookPaintingLocation = obtainTheListOfComicBookPaintingLocation(listOfComicBookPaintings: orderPlayerListOfComicBookPaintings)
-        totalDistance = calculateTheTotalDistanceOfTheTour(listOfComicBookPaintingLocation: listOfComicBookPaintingLocation)
+        createTheTextForDistanceLabel(listOfComicBookPaintingLocation: listOfComicBookPaintingLocation)
     }
     
     // MARK: - basic function of the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
         orderTheListOfComicBookPaintings()
-        let totalDistanceDiv1000 = totalDistance/1000
-        let totalDistanceToDisplay = (totalDistanceDiv1000*100).rounded()/100
-        comicBookTourPaintingInfoLabel.text = "The comicbook Painting tour has \(playerListOfComicBookPaintings.count) Painting and the total distance of the tour is \(totalDistanceToDisplay) km."
     }
     
     override func didReceiveMemoryWarning() {
