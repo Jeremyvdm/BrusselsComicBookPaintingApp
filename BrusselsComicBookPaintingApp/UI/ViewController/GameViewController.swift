@@ -18,6 +18,8 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     var gameComicBookPainting : ComicsBookPainting = ComicsBookPainting()
     var gameComicBookPaintingIndex : Int = 0
     var locationManager = CLLocationManager()
+    var numbeerOfComicBOokPaintingPassed = 0
+    var numbeerOfComicBOokPaintingReached = 0
     
     var currentPlayerLocation: CLLocation?{
         didSet{
@@ -46,6 +48,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     @IBOutlet weak var comicBookPaintnigInfoDistanceLabel: UILabel!
     
     @IBAction func goTheNextComicBookPainting(_ sender: Any) {
+        numbeerOfComicBOokPaintingPassed += 1
         gameComicBookPaintingIndex += 1
         continueTheGame(gameComicBookPaintingIndex : gameComicBookPaintingIndex)
         playTheGameAndGetTheDisanceTF(playerCurrentLocation : self.currentPlayerLocation!, gameComicBookPainting : gameComicBookPainting)
@@ -129,6 +132,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
             
             if walkingDistanceToThePaintingRounded < 0.06{
                 self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
+                self.numbeerOfComicBOokPaintingReached += 1
             }
         })
         
@@ -173,5 +177,14 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "victorySegue" {
+            if let victorySegue = segue.destination as? VictoryViewController{
+                victorySegue.numberOfComicBookPaintingPassed = numbeerOfComicBOokPaintingReached
+                victorySegue.numberOfComicBookPaintingReached = numbeerOfComicBOokPaintingReached
+            }
+        }
     }
 }

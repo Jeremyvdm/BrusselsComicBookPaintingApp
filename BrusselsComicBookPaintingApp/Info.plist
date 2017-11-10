@@ -30,6 +30,10 @@
 	<string>The Application need Acces to your Location to locate the Paintings near by.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The Application need Acces to your Location to locate the Paintings near by</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To take picture of the comics book paintnigs</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>To save the picture of you want to</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

@@ -22,7 +22,6 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     var distanceBetweenTwoComicBookPainting : Double = 500.00
     var startingPoint = CLLocation(latitude: 50.838042, longitude: 4.347661)
     let locationManager = CLLocationManager()
-    var currentPlayerLocation = CLLocation()
     var totalDistance = 0.00
     let realm = try! Realm()
     
@@ -51,7 +50,7 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         case 2:
             startingPoint = CLLocation(latitude: 50.848553, longitude: 4.350578)
         case 3:
-            startingPoint = currentPlayerLocation
+            startingPoint = getUserLocation()
         default :
             break
         }
@@ -157,16 +156,11 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        guard let currentLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation else {return}
-        self.currentPlayerLocation = currentLocation
+    
+    func getUserLocation()->CLLocation{
+        guard let currentLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation else {return CLLocation()}
+        return currentLocation
         
-        NotificationCenter.default.addObserver(forName: .onUserPositionChanged, object: nil, queue: OperationQueue.main) { (notification) in
-            if let newLocation = notification.userInfo?["lastLocation"] as? CLLocation{
-                self.currentPlayerLocation = newLocation
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {

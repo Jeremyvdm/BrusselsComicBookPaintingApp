@@ -34,7 +34,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="130" id="8GE-8u-dtb"/>
                                                     </constraints>
-                                                    <string key="text">You are new?  Welcome to the Brussels Comics Painting Tour Application please insert the the text field with you information. To set up you account:</string>
+                                                    <string key="text">You are new?  Welcome to the Brussels Comics Painting Tour Application please insert the the text field with your information. To set up your account:</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -240,17 +240,17 @@
                                 <rect key="frame" x="10" y="64" width="300" height="416"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2FZ-tA-MqX">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="828.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="788"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-8v-fpR">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="122"/>
-                                                <string key="text">Welcome to The Brussels comics painting Tour Initiation please choose the starting point and the number of paintong you want to find, your starting location and the distance between painitng:</string>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="81.5"/>
+                                                <string key="text">Welcome to The Brussels comics painting Tour Initiation, if you want to see all the location of the comics book paintings click on the button below:</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-rN-K7x">
-                                                <rect key="frame" x="0.0" y="147" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="106.5" width="300" height="30"/>
                                                 <state key="normal" title="show the map with all the comics paintings"/>
                                                 <connections>
                                                     <segue destination="cwh-cJ-pKq" kind="show" id="eNl-Dg-UR5">
@@ -258,14 +258,14 @@
                                                     </segue>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how many painting do you want to find?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZN-2n-LQz">
-                                                <rect key="frame" x="0.0" y="202" width="300" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how many paintings do you want to find?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZN-2n-LQz">
+                                                <rect key="frame" x="0.0" y="161.5" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WZS-jn-tCD">
-                                                <rect key="frame" x="0.0" y="268" width="300" height="29"/>
+                                                <rect key="frame" x="0.0" y="227.5" width="300" height="29"/>
                                                 <segments>
                                                     <segment title="5"/>
                                                     <segment title="10"/>
@@ -276,14 +276,14 @@
                                                     <action selector="numberOfPaintingSegmentControl:" destination="8HX-s2-P77" eventType="valueChanged" id="kAS-Vt-YJ4"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose your location Starter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBI-H2-LYy">
-                                                <rect key="frame" x="0.0" y="321" width="300" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose your stating location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBI-H2-LYy">
+                                                <rect key="frame" x="0.0" y="280.5" width="300" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OdL-PO-2pE">
-                                                <rect key="frame" x="0.0" y="366.5" width="300" height="29"/>
+                                                <rect key="frame" x="0.0" y="326" width="300" height="29"/>
                                                 <segments>
                                                     <segment title="Marolles"/>
                                                     <segment title="Laaken"/>
@@ -294,14 +294,14 @@
                                                     <action selector="startingPointSegmentControl:" destination="8HX-s2-P77" eventType="valueChanged" id="XM1-pG-gsW"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="which is the maximum distance radius you are willing to walk" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-60-v2W">
-                                                <rect key="frame" x="0.0" y="419.5" width="300" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="which is the maximum radius distance you are willing to walk?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwU-60-v2W">
+                                                <rect key="frame" x="0.0" y="379" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3rC-FQ-9UG">
-                                                <rect key="frame" x="0.0" y="485.5" width="300" height="29"/>
+                                                <rect key="frame" x="0.0" y="445" width="300" height="29"/>
                                                 <segments>
                                                     <segment title="1"/>
                                                     <segment title="2"/>
@@ -312,14 +312,14 @@
                                                     <action selector="numberOfKilimetersRadiusSegmentControl:" destination="8HX-s2-P77" eventType="valueChanged" id="WwT-Hx-Mzn"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="which is the maximum distance you are willing to walk between two comic book paintings?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GP-zv-Nmv">
-                                                <rect key="frame" x="0.0" y="538.5" width="300" height="61"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="which is the maximum distance you want between two comic book paintings?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GP-zv-Nmv">
+                                                <rect key="frame" x="0.0" y="498" width="300" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I5P-SZ-Cap">
-                                                <rect key="frame" x="0.0" y="624.5" width="300" height="29"/>
+                                                <rect key="frame" x="0.0" y="584" width="300" height="29"/>
                                                 <segments>
                                                     <segment title="0.5"/>
                                                     <segment title="1"/>
@@ -331,20 +331,20 @@
                                                 </connections>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGm-EL-Xd0">
-                                                <rect key="frame" x="0.0" y="677.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="637" width="300" height="30"/>
                                                 <state key="normal" title="Go to Comic Book Tour"/>
                                                 <connections>
                                                     <action selector="goToComicBookTour:" destination="8HX-s2-P77" eventType="touchUpInside" id="EZ6-0q-gxe"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="would you like to access the User information?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbV-Gs-oph">
-                                                <rect key="frame" x="0.0" y="732.5" width="300" height="41"/>
+                                                <rect key="frame" x="0.0" y="692" width="300" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-az-zNk">
-                                                <rect key="frame" x="0.0" y="798.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="758" width="300" height="30"/>
                                                 <state key="normal" title="user information"/>
                                                 <connections>
                                                     <segue destination="5ai-Vy-15l" kind="show" id="sRz-UP-edi">
@@ -526,7 +526,7 @@
             </objects>
             <point key="canvasLocation" x="788" y="1324.5877061469266"/>
         </scene>
-        <!--Comic book Tour-->
+        <!--Comics book Tour-->
         <scene sceneID="wcO-9M-0MK">
             <objects>
                 <tableViewController id="S09-Wu-aoj" customClass="ComicTourTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -699,11 +699,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Start to the play the Game" id="zrd-hF-5gJ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5cB-qV-4cN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5cB-qV-4cN">
                                         <rect key="frame" x="0.0" y="538" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cB-qV-4cN" id="dCv-NG-qq7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-9k-U9f">
@@ -731,7 +731,7 @@
                             <outlet property="delegate" destination="S09-Wu-aoj" id="FP4-7M-Rzn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Comic book Tour" id="eZk-dr-QyP"/>
+                    <navigationItem key="navigationItem" title="Comics book Tour" id="eZk-dr-QyP"/>
                     <connections>
                         <outlet property="comicBookTourPaintingInfoLabel" destination="o1e-vo-lFO" id="Fgh-ey-O4W"/>
                         <outlet property="comicTourNameTextField" destination="vu9-xy-d3g" id="6aw-y4-ziJ"/>
@@ -1034,9 +1034,10 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXd-Zu-iYt">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="35"/>
-                                                <state key="normal" title="Is it a good picture?"/>
+                                                <state key="normal" title="save the picture"/>
                                                 <connections>
                                                     <action selector="isAGoodPicture:" destination="Thp-vK-Ovx" eventType="touchUpInside" id="eKz-1b-VDr"/>
+                                                    <action selector="savePictureAction:" destination="Thp-vK-Ovx" eventType="touchUpInside" id="SgH-9F-E7w"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1109,7 +1110,7 @@
             </objects>
             <point key="canvasLocation" x="2387" y="2929"/>
         </scene>
-        <!--ComicBook Painting Tour  Map-->
+        <!--Comics Book Painting Tour  Map-->
         <scene sceneID="Atf-dg-Hib">
             <objects>
                 <viewController id="QVX-Hw-EXN" customClass="ComicBookPaintingTourMapViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -1125,7 +1126,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Dyb-rG-lSs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ComicBook Painting Tour  Map" id="1Cl-TL-oDE"/>
+                    <navigationItem key="navigationItem" title="Comics Book Painting Tour  Map" id="1Cl-TL-oDE"/>
                     <connections>
                         <outlet property="mapView" destination="yVL-dI-PTL" id="Q1a-fP-eU7"/>
                         <segue destination="dfg-RM-KOn" kind="show" identifier="showInfoFromComicTourMapSegue" id="cYG-2c-icu">
@@ -1137,7 +1138,7 @@
             </objects>
             <point key="canvasLocation" x="2794.4000000000001" y="2099.1004497751128"/>
         </scene>
-        <!--comic book painting Detail-->
+        <!--comics book painting Details-->
         <scene sceneID="SpY-RC-B29">
             <objects>
                 <tableViewController id="dfg-RM-KOn" customClass="ComicsBookPaintingDetailTableViewController" customModule="BrusselsComicBookPaintingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -1264,7 +1265,7 @@
                             <outlet property="delegate" destination="dfg-RM-KOn" id="bY3-mo-sXq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="comic book painting Detail" id="ILW-CG-5C5"/>
+                    <navigationItem key="navigationItem" title="comics book painting Details" id="ILW-CG-5C5"/>
                     <connections>
                         <outlet property="adressLabel" destination="eqm-cP-4Ck" id="LjN-ly-uXm"/>
                         <outlet property="authorLabel" destination="QBn-M2-lsn" id="VKe-k3-NG9"/>
@@ -1292,7 +1293,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="226"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-MO-cZK">
-                                                <string key="text">Welcome to the Brussels comics book tour game. Please intsert you User name and your password to continue. If you don't have a account click on New User:</string>
+                                                <string key="text">Welcome to the Brussels comics book tour Application. Please insert your email and your password to continue. If you don't have a account click on New User:</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1416,6 +1417,6 @@
         <image name="victoryImage" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Aw2-dU-nBn"/>
+        <segue reference="cYG-2c-icu"/>
     </inferredMetricsTieBreakers>
 </document>
