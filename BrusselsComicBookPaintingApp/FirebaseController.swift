@@ -75,7 +75,6 @@ class FirebaseController {
             if let value = snapshot.value
             {
                 let userJson = JSON(value)
-                print(userJson)
                 guard let userLastName = userJson["lastName"].string,
                     let userEmail = userJson["email"].string,
                     let userFistName = userJson["firstName"].string,

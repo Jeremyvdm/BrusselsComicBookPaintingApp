@@ -103,7 +103,7 @@ extension AppDelegate: CLLocationManagerDelegate{
         if lastSavedLocation == nil{
             self.lastSavedLocation = newLocation
         }else{
-            if newLocation.horizontalAccuracy < locationManager.desiredAccuracy && newLocation.distance(from: lastSavedLocation!) > 100{
+            if newLocation.horizontalAccuracy < locationManager.desiredAccuracy && newLocation.distance(from: lastSavedLocation!) > 5{
                 self.lastSavedLocation = newLocation
             }
         }

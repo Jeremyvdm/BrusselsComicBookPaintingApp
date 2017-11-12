@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class TakeAPictureViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
@@ -14,12 +15,12 @@ UINavigationControllerDelegate {
     let imagePicker = UIImagePickerController()
     var delegate : TakeAPictureViewControllerDelegate?
     var gameComicBookPaintingIndex : Int = 0
+    var imageURL : URL?
     
     @IBOutlet weak var ComicBookPaintingPictureImagePickerView: UIImageView!
     
     @IBAction func takeAPicture(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
-            imagePicker.delegate = self
             imagePicker.sourceType = .camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
@@ -31,6 +32,7 @@ UINavigationControllerDelegate {
         let compressImage = UIImage(data : imageData!)
         UIImageWriteToSavedPhotosAlbum(compressImage!, nil, nil, nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
             ComicBookPaintingPictureImagePickerView.image = image
@@ -50,6 +52,8 @@ UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        guard let comicsPaintingImageURL = imageURL else{return}
+        ComicBookPaintingPictureImagePickerView.af_setImage(withURL: comicsPaintingImageURL)
     }
     
     override func didReceiveMemoryWarning() {

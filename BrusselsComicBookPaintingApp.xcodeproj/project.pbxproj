@@ -42,6 +42,7 @@
 		13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrusselsComicBookPaintingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3188618F7E11E6BD0781FE65 /* Pods-BrusselsComicBookPaintingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.release.xcconfig"; sourceTree = "<group>"; };
 		5E252FCB79D626112D9BB387 /* Pods-BrusselsComicBookPaintingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		800F69381FB75700003BD86A /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		8070A3E11FA31B57004386C5 /* BrusselsComicBookPaintingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrusselsComicBookPaintingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070A3E41FA31B57004386C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8070A3E91FA31B57004386C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 				807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */,
 				807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */,
 				807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */,
+				800F69381FB75700003BD86A /* Location.gpx */,
 				807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */,
 				807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */,
 				807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */,

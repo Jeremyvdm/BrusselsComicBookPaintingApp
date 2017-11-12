@@ -30,6 +30,8 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     // here initiation of the number of painting
     @IBAction func numberOfPaintingSegmentControl(_ sender: UISegmentedControl) {
         switch (sender.selectedSegmentIndex) {
+        case 0:
+            numberOfComicBookPainting = 5
         case 1:
             numberOfComicBookPainting = 10
         case 2:
@@ -45,6 +47,8 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     // here initiation of the starting location
     @IBAction func startingPointSegmentControl(_ sender: UISegmentedControl) {
         switch (sender.selectedSegmentIndex) {
+        case 0:
+            startingPoint = CLLocation(latitude: 50.838042, longitude: 4.347661)
         case 1:
             startingPoint = CLLocation(latitude: 50.885075, longitude: 4.344140)
         case 2:
@@ -61,6 +65,8 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     // here is initiation the number of kilometer radius
     @IBAction func numberOfKilimetersRadiusSegmentControl(_ sender: UISegmentedControl) {
         switch (sender.selectedSegmentIndex) {
+        case 0:
+            numberOfKilometerRadius = 1000.00
         case 1:
             numberOfKilometerRadius = 2000.00
         case 2:
@@ -75,6 +81,8 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     // here is the initiation of the distance between two comic book location
     @IBAction func numberOfKilimeterBetweenTwoPaintings(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
+        case 0:
+            distanceBetweenTwoComicBookPainting = 500.00
         case 1:
             distanceBetweenTwoComicBookPainting = 1000.00
         case 2:

@@ -26,6 +26,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
             playTheGameAndGetTheDisanceTF(playerCurrentLocation: self.currentPlayerLocation!, gameComicBookPainting: gameComicBookPainting)
         }
     }
+    var firstDistance = 0.0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,6 +51,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     @IBAction func goTheNextComicBookPainting(_ sender: Any) {
         numbeerOfComicBOokPaintingPassed += 1
         gameComicBookPaintingIndex += 1
+        firstDistance = 0.0
         continueTheGame(gameComicBookPaintingIndex : gameComicBookPaintingIndex)
         playTheGameAndGetTheDisanceTF(playerCurrentLocation : self.currentPlayerLocation!, gameComicBookPainting : gameComicBookPainting)
     }
@@ -125,20 +127,24 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
             
             let walkingDistanceToThePaintingDiv1000 = walkingDistanceToThePainting/1000
             let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*100).rounded()/100
-            AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
-            
-            let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
-            self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+            if self.firstDistance == 0 || self.firstDistance - walkingDistanceToThePaintingRounded > 20{
+                AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
+                self.firstDistance = walkingDistanceToThePaintingRounded
+                let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
+                self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+            }
             
             if walkingDistanceToThePaintingRounded < 0.06{
                 self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
-                self.numbeerOfComicBOokPaintingReached += 1
+                
             }
         })
         
     }
     
     func gameAlerContinuePicture(title: String, andMessage: String){
+        self.firstDistance = 0.0
+        self.numbeerOfComicBOokPaintingReached += 1
         let alertControler = UIAlertController(title: title, message: andMessage, preferredStyle: .alert)
         let takePictureAction = UIAlertAction(title : "take picture", style : .default, handler: { (action) -> Void in
             self.takeTheComicBookPainingPicutre()
@@ -180,11 +186,16 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "victorySegue" {
-            if let victorySegue = segue.destination as? VictoryViewController{
-                victorySegue.numberOfComicBookPaintingPassed = numbeerOfComicBOokPaintingReached
-                victorySegue.numberOfComicBookPaintingReached = numbeerOfComicBOokPaintingReached
-            }
+        let comicBookPaintingPassed = numbeerOfComicBOokPaintingPassed
+        let comicBookPaintingReached = numbeerOfComicBOokPaintingReached
+        if let victorySegue = segue.destination as? VictoryViewController{
+            victorySegue.numberOfComicBookPaintingPassed = comicBookPaintingPassed
+            victorySegue.numberOfComicBookPaintingReached = comicBookPaintingReached
+        }else if let takePictureSegue = segue.destination as? TakeAPictureViewController{
+            takePictureSegue.gameComicBookPaintingIndex = gameComicBookPaintingIndex
+            takePictureSegue.imageURL = gameComicBookPainting.comicsPaintingImageURL
+            takePictureSegue.delegate = self
         }
+        
     }
 }
