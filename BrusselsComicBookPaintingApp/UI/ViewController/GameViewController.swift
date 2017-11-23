@@ -64,8 +64,8 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
         mapItem.openInMaps(launchOptions: options)
     }
     
-    func nextComicBookPaintng(gameComicBookPaintingIndex: Int) {
-        self.gameComicBookPaintingIndex = gameComicBookPaintingIndex
+    func passToNextPanitng(comicsPaintingIndex: Int) {
+        self.gameComicBookPaintingIndex = gameComicBookPaintingIndex + 1
         continueTheGame(gameComicBookPaintingIndex: gameComicBookPaintingIndex)
     }
     
@@ -165,7 +165,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //set up of the different View element for the begining of the Game
-        gameViewNavBar.title = "Game View"
+        gameViewNavBar.hidesBackButton = true
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.allowsBackgroundLocationUpdates = true
@@ -190,7 +190,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
         if let victorySegue = segue.destination as? VictoryViewController{
             victorySegue.numberOfComicBookPaintingPassed = comicBookPaintingPassed
             victorySegue.numberOfComicBookPaintingReached = comicBookPaintingReached
-        }else if let takePictureSegue = segue.destination as? TakeAPictureViewController{
+        }else if let takePictureSegue = segue.destination as? TakeaPictureViewController{
             takePictureSegue.gameComicBookPaintingIndex = gameComicBookPaintingIndex
             takePictureSegue.imageURL = gameComicBookPainting.comicsPaintingImageURL
             takePictureSegue.delegate = self
