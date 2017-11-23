@@ -13,10 +13,23 @@ class ListOfPaintingTourTableViewController: UITableViewController {
     // MARK: - variable declaration
     var playerComicBooksList : [ComicsBookPainting] = []
     var comicBookPaintingChosen : ComicsBookPainting?
+    var hideBackButton = false
     
+    @IBOutlet weak var tourListNavBar: UINavigationItem!
     // MARK: - basic function of the table view controller
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if !hideBackButton{
+            parent?.navigationItem.hidesBackButton = true
+            parent?.navigationItem.title = "Comics Painting Tour List"
+        }else{
+            tourListNavBar.hidesBackButton = hideBackButton
+            tourListNavBar.title = "Comis Painting Tour List"
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,12 +62,18 @@ class ListOfPaintingTourTableViewController: UITableViewController {
     }
     
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        comicBookPaintingChosen = playerComicBooksList[indexPath.row]
+        performSegue(withIdentifier: "detailSegueFromTourList", sender: Any?.self)
+    }
+    
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailTBVC = segue.destination as? ComicsBookPaintingDetailTableViewController, let selectedIndexPath = tableView.indexPathForSelectedRow{
-            detailTBVC.comicPaintingChosen = playerComicBooksList[selectedIndexPath.row]
+        if let detailTBVC = segue.destination as? ComicsBookPaintingDetailTableViewController{
+            detailTBVC.comicPaintingChosen = comicBookPaintingChosen
         }
     }
 }

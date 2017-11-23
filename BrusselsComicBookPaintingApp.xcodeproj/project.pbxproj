@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801E95061FBF21D10060CF48 /* ComicsBookPaintingTourItitiationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801E95051FBF21D10060CF48 /* ComicsBookPaintingTourItitiationTabBarController.swift */; };
+		804A60AE1FC44C0A00C161FE /* ComicBookPaintingTourTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A60AD1FC44C0A00C161FE /* ComicBookPaintingTourTabBarController.swift */; };
 		8070A3E51FA31B57004386C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8070A3E41FA31B57004386C5 /* AppDelegate.swift */; };
 		8070A3EA1FA31B57004386C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8070A3E81FA31B57004386C5 /* Main.storyboard */; };
 		8070A3ED1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8070A3EB1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld */; };
@@ -22,7 +24,6 @@
 		807A36EA1FA33289003E52F6 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36E91FA33289003E52F6 /* FirebaseController.swift */; };
 		807A36EC1FA3339A003E52F6 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */; };
 		807A36EE1FA333D8003E52F6 /* NewUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */; };
-		807A36F01FA33424003E52F6 /* ComicTourInitiationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */; };
 		807A36F21FA33470003E52F6 /* UserInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */; };
 		807A36F41FA334B7003E52F6 /* UserInformationUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */; };
 		807A36F61FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */; };
@@ -35,6 +36,7 @@
 		807A37041FA3366D003E52F6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37031FA3366D003E52F6 /* GameViewController.swift */; };
 		807A37061FA336A9003E52F6 /* TakeAPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */; };
 		807A37081FA336E0003E52F6 /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807A37071FA336E0003E52F6 /* VictoryViewController.swift */; };
+		808C6C3F1FC72A5D006F90AF /* ComicsTourInitiationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C6C3E1FC72A5D006F90AF /* ComicsTourInitiationTableViewController.swift */; };
 		E37D055EE75E74AD5F24FFB0 /* Pods_BrusselsComicBookPaintingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +44,8 @@
 		13341BA9407CD27322E2AA21 /* Pods_BrusselsComicBookPaintingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrusselsComicBookPaintingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3188618F7E11E6BD0781FE65 /* Pods-BrusselsComicBookPaintingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.release.xcconfig"; sourceTree = "<group>"; };
 		5E252FCB79D626112D9BB387 /* Pods-BrusselsComicBookPaintingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrusselsComicBookPaintingApp/Pods-BrusselsComicBookPaintingApp.debug.xcconfig"; sourceTree = "<group>"; };
-		800F69381FB75700003BD86A /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		801E95051FBF21D10060CF48 /* ComicsBookPaintingTourItitiationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsBookPaintingTourItitiationTabBarController.swift; sourceTree = "<group>"; };
+		804A60AD1FC44C0A00C161FE /* ComicBookPaintingTourTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicBookPaintingTourTabBarController.swift; sourceTree = "<group>"; };
 		8070A3E11FA31B57004386C5 /* BrusselsComicBookPaintingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrusselsComicBookPaintingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8070A3E41FA31B57004386C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8070A3E91FA31B57004386C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		807A36E91FA33289003E52F6 /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserTableViewController.swift; sourceTree = "<group>"; };
-		807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTourInitiationViewController.swift; sourceTree = "<group>"; };
 		807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTableViewController.swift; sourceTree = "<group>"; };
 		807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationUITableViewCell.swift; sourceTree = "<group>"; };
 		807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listOfComicBookPaintnigsTourTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		807A37031FA3366D003E52F6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAPictureViewController.swift; sourceTree = "<group>"; };
 		807A37071FA336E0003E52F6 /* VictoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
+		808C6C3E1FC72A5D006F90AF /* ComicsTourInitiationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTourInitiationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +165,6 @@
 			children = (
 				807A36EB1FA3339A003E52F6 /* ConnectionViewController.swift */,
 				807A36ED1FA333D8003E52F6 /* NewUserTableViewController.swift */,
-				807A36EF1FA33424003E52F6 /* ComicTourInitiationViewController.swift */,
-				800F69381FB75700003BD86A /* Location.gpx */,
 				807A36F11FA33470003E52F6 /* UserInformationTableViewController.swift */,
 				807A36F31FA334B7003E52F6 /* UserInformationUITableViewCell.swift */,
 				807A36F51FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift */,
@@ -176,6 +177,9 @@
 				807A37031FA3366D003E52F6 /* GameViewController.swift */,
 				807A37051FA336A9003E52F6 /* TakeAPictureViewController.swift */,
 				807A37071FA336E0003E52F6 /* VictoryViewController.swift */,
+				801E95051FBF21D10060CF48 /* ComicsBookPaintingTourItitiationTabBarController.swift */,
+				804A60AD1FC44C0A00C161FE /* ComicBookPaintingTourTabBarController.swift */,
+				808C6C3E1FC72A5D006F90AF /* ComicsTourInitiationTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -337,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808C6C3F1FC72A5D006F90AF /* ComicsTourInitiationTableViewController.swift in Sources */,
 				807A36F61FA334E7003E52F6 /* listOfComicBookPaintnigsTourTableViewCell.swift in Sources */,
 				807A36FE1FA335E1003E52F6 /* ComicBookPaintingTourMapViewController.swift in Sources */,
 				807A37001FA3360E003E52F6 /* ListOfPaintingTourTableViewController.swift in Sources */,
@@ -349,6 +354,7 @@
 				807A36F81FA33527003E52F6 /* ComicsPaintingMapViewController.swift in Sources */,
 				807A36FC1FA335AC003E52F6 /* ComicTourTableViewController.swift in Sources */,
 				807A36E61FA33202003E52F6 /* ExtentionUIViewController.swift in Sources */,
+				804A60AE1FC44C0A00C161FE /* ComicBookPaintingTourTabBarController.swift in Sources */,
 				807A36F21FA33470003E52F6 /* UserInformationTableViewController.swift in Sources */,
 				807A37081FA336E0003E52F6 /* VictoryViewController.swift in Sources */,
 				807A36E41FA331CF003E52F6 /* WebServiceControler.swift in Sources */,
@@ -356,8 +362,8 @@
 				8070A3ED1FA31B57004386C5 /* BrusselsComicBookPaintingApp.xcdatamodeld in Sources */,
 				807A36DD1FA330C1003E52F6 /* ComicsBookPainting.swift in Sources */,
 				807A36E11FA33158003E52F6 /* ComicBooksPaintingsTour.swift in Sources */,
-				807A36F01FA33424003E52F6 /* ComicTourInitiationViewController.swift in Sources */,
 				807A36EE1FA333D8003E52F6 /* NewUserTableViewController.swift in Sources */,
+				801E95061FBF21D10060CF48 /* ComicsBookPaintingTourItitiationTabBarController.swift in Sources */,
 				807A37041FA3366D003E52F6 /* GameViewController.swift in Sources */,
 				807A36F41FA334B7003E52F6 /* UserInformationUITableViewCell.swift in Sources */,
 				807A37061FA336A9003E52F6 /* TakeAPictureViewController.swift in Sources */,

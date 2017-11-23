@@ -12,12 +12,14 @@ class VictoryViewController: UIViewController {
     
     @IBOutlet weak var victoryLabel: UILabel!
     
+    @IBOutlet weak var victoryNavBar: UINavigationItem!
+    
     var numberOfComicBookPaintingPassed : Int?
     var numberOfComicBookPaintingReached : Int?
     
     @IBAction func startAgainButton(_ sender: Any) {
         let comicBookPaintingAppStroryBoard = UIStoryboard(name: "Main", bundle: nil)
-        let comicBookTourInitiationVC = comicBookPaintingAppStroryBoard.instantiateViewController(withIdentifier: "comicBookTourInitiationVC") as! ComicTourInitiationViewController
+        let comicBookTourInitiationVC = comicBookPaintingAppStroryBoard.instantiateViewController(withIdentifier: "comicBookTourInitiationVC") as! ComicsTourInitiationTableViewController
         self.navigationController?.pushViewController(comicBookTourInitiationVC, animated: true)
     }
     @IBAction func quitButton(_ sender: Any) {
@@ -29,8 +31,9 @@ class VictoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        victoryLabel.text = "You completed your Comic Book Painting Tour Congratulation! \n You have passed only \(numberOfComicBookPaintingPassed!) comics book paintings and you have reached \(numberOfComicBookPaintingReached!)! \n What would you like to do? \n click on the play again button to go back to create an other tour. /n click on qui to go back at the login window to quit the application!"
+        victoryNavBar.hidesBackButton = true
+        victoryNavBar.title = "Victory!!!!"
+        victoryLabel.text = "You completed your Comic Book Painting Tour Congratulation! \n You have passed only \(numberOfComicBookPaintingPassed!) comics book paintings and you have reached \(numberOfComicBookPaintingReached!)! \n What would you like to do? \n click on the play again button to go back to create an other tour. \n click on qui to go back at the login window to quit the application!"
     }
     
     override func didReceiveMemoryWarning() {

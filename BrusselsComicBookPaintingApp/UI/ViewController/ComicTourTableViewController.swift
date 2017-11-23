@@ -23,6 +23,12 @@ class ComicTourTableViewController: UITableViewController {
     @IBOutlet weak var comicTourNameTextField: UITextField!
     @IBOutlet weak var comicBookTourPaintingInfoLabel: UILabel!
     
+    @IBOutlet weak var tourInfoNavBar: UINavigationItem!
+    @IBOutlet weak var startGameButton: UIButton!
+    @IBAction func startGameVC(_ sender: Any) {
+        performSegue(withIdentifier: "goToComicsBookPaintingGameSegue", sender: startGameButton)
+    }
+    
     // MARK: - the confirm button will add the comic book tour to the user database in firebase
     @IBAction func confirmButton(_ sender: Any) {
         guard let tourName = comicTourNameTextField.text
@@ -144,24 +150,21 @@ class ComicTourTableViewController: UITableViewController {
         orderTheListOfComicBookPaintings()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        parent?.navigationItem.hidesBackButton = true
+        parent?.navigationItem.title = "Comics Painting Tour Info"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let comicPaintingMapSegue = segue.destination as? ComicBookPaintingTourMapViewController{
-            comicPaintingMapSegue.listOfComicBookPaintings = self.orderPlayerListOfComicBookPaintings
-            comicPaintingMapSegue.startingPointLocation = startingLocation
-        }
-        else if let listOfPaintingController = segue.destination as? ListOfPaintingTourTableViewController{
-            listOfPaintingController.playerComicBooksList = self.orderPlayerListOfComicBookPaintings
-        }
-        else if let gameComicBookPaintingVC = segue.destination as? GameViewController{
+        if let gameComicBookPaintingVC = segue.destination as? GameViewController{
             gameComicBookPaintingVC.listOfComicBookPaintingOfTheTour = self.orderPlayerListOfComicBookPaintings
         }
     }
-    
 }
 

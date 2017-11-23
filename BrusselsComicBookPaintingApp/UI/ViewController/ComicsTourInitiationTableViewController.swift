@@ -1,8 +1,8 @@
 //
-//  ComicTourInitiationViewController.swift
+//  ComicsTourInitiationTableViewController.swift
 //  BrusselsComicBookPaintingApp
 //
-//  Created by Jeremy Vandermeersch on 27/10/2017.
+//  Created by Jeremy Vandermeersch on 23/11/2017.
 //  Copyright © 2017 Jeremy Vandermeersch. All rights reserved.
 //
 
@@ -11,9 +11,8 @@ import CoreLocation
 import MapKit
 import RealmSwift
 
+class ComicsTourInitiationTableViewController: UITableViewController, CLLocationManagerDelegate {
 
-class ComicTourInitiationViewController: UIViewController, CLLocationManagerDelegate {
-    
     // MARK: - variable declaration
     var ListOfAllComicPaintings : [ComicsBookPainting] = []
     var currentUser : UserApp = UserApp()
@@ -26,6 +25,11 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
     let realm = try! Realm()
     
     // MARK: - view item declaration and view item action
+    
+    @IBOutlet weak var goToComicsTourInfo: UIButton!
+    @IBAction func goToComicBookTourTabBC(_ sender: Any) {
+        performSegue(withIdentifier: "goToComicsBookPaintingTourInfoSegue", sender: goToComicsTourInfo)
+    }
     
     // here initiation of the number of painting
     @IBAction func numberOfPaintingSegmentControl(_ sender: UISegmentedControl) {
@@ -94,9 +98,6 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         }
     }
     
-    @IBAction func goToComicBookTour(_ sender: Any) {
-        performSegue(withIdentifier: "goToComicBookTourSegue", sender: sender)
-    }
     
     
     // MARK: - custum fonction
@@ -124,45 +125,22 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         return playerComicBookTour
     }
     
-    // will colect all the comicBook painting of the application from the web or from the inern memory
-    func findAllComicsPainting(){
-        if realm.isEmpty{
-            WebServiceControler.fetchComicsBookPainting{
-                items in
-                self.ListOfAllComicPaintings += items
-                for comicBookPainting in items{
-                    try! self.realm.write {
-                        self.realm.add(comicBookPainting)
-                    }
-                }
-            }
-        }else{
-            let comicBooksPaintingsFromRealm = realm.objects(ComicsBookPainting.self)
-            for comicBookPainting in comicBooksPaintingsFromRealm{
-                ListOfAllComicPaintings.append(comicBookPainting)
-            }
-        }
-    }
-    
-    // will fetch the current user
-    func fetchCurrentUser(){
-        FirebaseController.sharedInstance.getUserFromDataBase(handler: {user in
-            if user.firstName != "" {
-                self.currentUser = user
-            }
-        })
-    }
     
     
     // MARK: - function of the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        findAllComicsPainting()
-        fetchCurrentUser()
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
         locationManager.delegate = self as CLLocationManagerDelegate
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.title = "Comics Painting Tour Initiation"
     }
     
     func getUserLocation()->CLLocation{
@@ -176,25 +154,11 @@ class ComicTourInitiationViewController: UIViewController, CLLocationManagerDele
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Pass the selected object to the new view controller.
-        if let comicPaintingMapSegue = segue.destination as? ComicsPaintingMapViewController{
-            comicPaintingMapSegue.comicBookPaintings = self.ListOfAllComicPaintings
-        }
-        
-        if let comicPaintingTourSegue = segue.destination as? ComicTourTableViewController{
-            comicPaintingTourSegue.playerListOfComicBookPaintings = fetchPlayerComicBookTour()
-            comicPaintingTourSegue.currentUser = currentUser
-        }
-        
-        if let userInformationSegue = segue.destination as? UserInformationTableViewController{
-            userInformationSegue.allTheComicBookPaintings = ListOfAllComicPaintings
-            userInformationSegue.currentUser = currentUser
+        if let comicBookPaintingTourTabVC = segue.destination as? ComicBookPaintingTourTabBarController{
+            comicBookPaintingTourTabVC.playerListOfComicBookPaintings = fetchPlayerComicBookTour()
+            comicBookPaintingTourTabVC.currentUser = currentUser
+            comicBookPaintingTourTabVC.startingLocation = startingPoint
         }
     }
     

@@ -16,10 +16,13 @@ class UserInformationTableViewController: UITableViewController {
     var listOfUserComicBookPaintingTourDictionnary :  [String : [String]] = [:]
     var listOfUserInformation : [String : String] = [:]
     var listOfDictionnaryToDisplay : [String : [String : Any]] = [:]
+    var listOfComicsBookPainting : [ComicsBookPainting] = []
     
     
     // MARK: - view item declaration and view item action
     @IBOutlet var userIformationTableView: UITableView!
+    
+    @IBOutlet weak var userInfoNavBar: UINavigationItem!
     
     @IBAction func resetPassword(_ sender: UIBarButtonItem) {
         let email : String = currentUser.email
@@ -68,11 +71,19 @@ class UserInformationTableViewController: UITableViewController {
         return listOfComicBookPaintingsOfTheTour
     }
     
+    
     // MARK: - function view
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
         getUserInformation()
         userIformationTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.parent?.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.title = "User Information"
     }
     
     override func didReceiveMemoryWarning() {
@@ -131,9 +142,13 @@ class UserInformationTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let comicBookPaintingAppStroryBoard = UIStoryboard(name: "Main", bundle: nil)
-        let listOfComicBookPaintingsTBVC = comicBookPaintingAppStroryBoard.instantiateViewController(withIdentifier: "listOfComicBookPaintingsTBVC") as! ListOfPaintingTourTableViewController
-        listOfComicBookPaintingsTBVC.playerComicBooksList = fetchTheListOfComicBooksPaintingsFromDictionary(index: indexPath.row)
-        self.navigationController?.pushViewController(listOfComicBookPaintingsTBVC, animated: true)
+        listOfComicsBookPainting = fetchTheListOfComicBooksPaintingsFromDictionary(index: indexPath.row)
+        performSegue(withIdentifier: "showTourDetailSegue", sender: Any?.self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let listTourDetailVC = segue.destination as? ListOfPaintingTourTableViewController{
+            listTourDetailVC.playerComicBooksList = listOfComicsBookPainting
+        }
     }
 }

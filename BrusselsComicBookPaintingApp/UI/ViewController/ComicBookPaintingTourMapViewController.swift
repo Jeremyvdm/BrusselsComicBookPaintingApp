@@ -19,6 +19,7 @@ class ComicBookPaintingTourMapViewController: UIViewController, CLLocationManage
     
     // MARK: - view item declaration
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tourMapNavBar: UINavigationItem!
     
     
     // MARK: - custom function section
@@ -129,7 +130,7 @@ class ComicBookPaintingTourMapViewController: UIViewController, CLLocationManage
                 }
             }
         }
-        performSegue(withIdentifier: "showInfoFromComicTourMapSegue", sender: view)
+        performSegue(withIdentifier: "detailSegueFromTourMap", sender: view)
     }
     
     
@@ -143,9 +144,13 @@ class ComicBookPaintingTourMapViewController: UIViewController, CLLocationManage
         finishDrawingMap()
         // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        parent?.navigationItem.hidesBackButton = true
+        parent?.navigationItem.title = "Comics Painting Tour Map"
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -12,10 +12,10 @@ import CoreLocation
 
 class ComicsBookPaintingDetailTableViewController: UITableViewController {
     @IBOutlet weak var comicImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    @IBOutlet weak var tabBarDetailTitle: UINavigationItem!
     @IBOutlet weak var adressLabel: UILabel!
     
     var comicPaintingChosen : ComicsBookPainting?{
@@ -26,14 +26,13 @@ class ComicsBookPaintingDetailTableViewController: UITableViewController {
         }
     }
     
-    
     // MARK: - custom function
     
     // will define what the different view item will display
     func displayComicDetail(){
         guard let comicPaintingChosen = comicPaintingChosen
             else{return}
-        titleLabel.text = comicPaintingChosen.comicsPaintingTitle
+        tabBarDetailTitle.title = comicPaintingChosen.comicsPaintingTitle
         authorLabel.text = comicPaintingChosen.comicsPaintingAuthor
         guard let year = String(comicPaintingChosen.comicsPaintingYear) as? String else {return}
         yearLabel.text = year

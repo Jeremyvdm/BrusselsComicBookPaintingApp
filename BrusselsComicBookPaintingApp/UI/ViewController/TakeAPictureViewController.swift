@@ -19,6 +19,7 @@ UINavigationControllerDelegate {
     
     @IBOutlet weak var ComicBookPaintingPictureImagePickerView: UIImageView!
     
+    @IBOutlet weak var pictureNavBar: UINavigationItem!
     @IBAction func takeAPicture(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
             imagePicker.sourceType = .camera
@@ -51,6 +52,7 @@ UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pictureNavBar.title = "Picture Time"
         imagePicker.delegate = self
         guard let comicsPaintingImageURL = imageURL else{return}
         ComicBookPaintingPictureImagePickerView.af_setImage(withURL: comicsPaintingImageURL)

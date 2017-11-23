@@ -39,14 +39,11 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
         }
     }
     
-    
-    
-    
-    
-    @IBOutlet weak var gameNavigationTitle: UINavigationItem!
     @IBOutlet weak var comicBookPaintingImageView: UIImageView!
     @IBOutlet weak var comicBookPaintingInfoAdressLabel: UILabel!
     @IBOutlet weak var comicBookPaintnigInfoDistanceLabel: UILabel!
+    
+    @IBOutlet weak var gameViewNavBar: UINavigationItem!
     
     @IBAction func goTheNextComicBookPainting(_ sender: Any) {
         numbeerOfComicBOokPaintingPassed += 1
@@ -88,7 +85,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
         let gameComcBookPaintingTitle = gameComicBookPainting.comicsPaintingTitle
         let gameComcBookPaintingImageUrlOpt = gameComicBookPainting.comicsPaintingImageURL
         
-        gameNavigationTitle.title! = gameComcBookPaintingTitle
+        gameViewNavBar.title! = gameComcBookPaintingTitle
         guard let gameComcBookPaintingImageUrl = gameComcBookPaintingImageUrlOpt else{return}
         comicBookPaintingImageView.af_setImage(withURL: gameComcBookPaintingImageUrl)
         
@@ -126,20 +123,21 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
             walkingDistanceToThePainting = route.distance
             
             let walkingDistanceToThePaintingDiv1000 = walkingDistanceToThePainting/1000
-            let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*100).rounded()/100
-            if self.firstDistance == 0 || self.firstDistance - walkingDistanceToThePaintingRounded > 20{
+            let walkingDistanceToThePaintingRounded = (walkingDistanceToThePaintingDiv1000*1000).rounded()/1000
+            if self.firstDistance == 0{
                 AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
-                self.firstDistance = walkingDistanceToThePaintingRounded
                 let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
                 self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
-            }
-            
-            if walkingDistanceToThePaintingRounded < 0.06{
+                self.firstDistance = walkingDistanceToThePaintingRounded
+            }else if(walkingDistanceToThePaintingRounded) >= (self.firstDistance - 20) || (walkingDistanceToThePaintingRounded) <= (self.firstDistance + 20) {
+                AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
+                let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
+                self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+                self.firstDistance = walkingDistanceToThePaintingRounded
+            }else if walkingDistanceToThePaintingRounded < 0.06{
                 self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
-                
             }
         })
-        
     }
     
     func gameAlerContinuePicture(title: String, andMessage: String){
@@ -167,6 +165,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //set up of the different View element for the begining of the Game
+        gameViewNavBar.title = "Game View"
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.allowsBackgroundLocationUpdates = true

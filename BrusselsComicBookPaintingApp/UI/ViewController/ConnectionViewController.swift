@@ -15,6 +15,7 @@ class ConnectionViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     
+    @IBOutlet weak var navBarConnectionView: UINavigationItem!
     
     
     // MARK: - function of the connection
@@ -30,7 +31,11 @@ class ConnectionViewController: UIViewController {
             }
             if success{
                 if (FirebaseController.sharedInstance.currentUser?.isEmailVerified)!{
-                    self.performSegue(withIdentifier: "enterApplicationSegue", sender: sender)
+                    
+                    self.goToIntitiationTourPart()
+//                    guard let comicBookPaintingsTourInitiationTabVC = self.storyboard?.instantiateViewController(withIdentifier: "CBPTITabBarController") as? ComicsBookPaintingTourItitiationTabBarController else {return}
+//                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                    appDelegate.window?.rootViewController =  comicBookPaintingsTourInitiationTabVC
                 }else{
                     self.presentEventDialog(withTitle: "email is not verified", andMessage: "first you need to verified your email address. Please do before entering the application", actionEnum : .cancelAction)
                 }
@@ -40,6 +45,10 @@ class ConnectionViewController: UIViewController {
         }
     }
     
+    func goToIntitiationTourPart(){
+        performSegue(withIdentifier: "goToComicBookTourInitiationTabBar", sender: logInButton)
+    }
+    
     @IBAction func newUserButton(_ sender: UIButton) {
         performSegue(withIdentifier: "newUserSegue", sender: sender)
     }
@@ -47,6 +56,7 @@ class ConnectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navBarConnectionView.title = "Comics Painting App Brussels"
     }
     
     

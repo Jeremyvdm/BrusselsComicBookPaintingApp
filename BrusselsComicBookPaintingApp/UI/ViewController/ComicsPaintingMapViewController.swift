@@ -17,9 +17,9 @@ class ComicsPaintingMapViewController : UIViewController, CLLocationManagerDeleg
     var comicBook: ComicsBookPainting?
     
     // MARK: - view item declaration
+    
+    @IBOutlet weak var completeMatNavBar: UINavigationItem!
     @IBOutlet weak var mapView: MKMapView!
-    
-    
     // MARK: - custom function
     // initial of the search to fetch all the comics books painting to display them on the map
     func addComicsBookPaintingPin(comicBookPaintings : [ComicsBookPainting]){
@@ -62,22 +62,26 @@ class ComicsPaintingMapViewController : UIViewController, CLLocationManagerDeleg
                 }
             }
         }
-        performSegue(withIdentifier: "comicPaintingDetailSegue", sender: view)
+        performSegue(withIdentifier: "detailSegueFromCompleteMap", sender: view)
     }
     
     // MARK: - function of the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         locationManager.delegate = self as CLLocationManagerDelegate
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         mapView.delegate = self as MKMapViewDelegate
         addComicsBookPaintingPin(comicBookPaintings: comicBookPaintings)
-        // Do any additional setup after loading the view.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.parent?.navigationItem.hidesBackButton = true
+        self.parent?.navigationItem.title = "Comics Painting Complete Map"
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
