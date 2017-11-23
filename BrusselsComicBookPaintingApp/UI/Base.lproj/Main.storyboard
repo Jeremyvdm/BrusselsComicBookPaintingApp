@@ -222,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Re-4H-YSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="-769"/>
+            <point key="canvasLocation" x="909" y="-624"/>
         </scene>
         <!--tour initiation-->
         <scene sceneID="ipm-lV-OOh">
@@ -414,7 +414,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsw-t6-5Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="984"/>
+            <point key="canvasLocation" x="1215" y="959"/>
         </scene>
         <!--Comics Painting Complete Map-->
         <scene sceneID="cD7-d5-cPe">
@@ -447,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTn-rr-uYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="124"/>
+            <point key="canvasLocation" x="1823" y="124"/>
         </scene>
         <!--User Information-->
         <scene sceneID="mjr-bD-js5">
@@ -546,7 +546,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFB-nh-flx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="984"/>
+            <point key="canvasLocation" x="53" y="959"/>
         </scene>
         <!--Title-->
         <scene sceneID="wcO-9M-0MK">
@@ -707,7 +707,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-dV-W3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="1790"/>
+            <point key="canvasLocation" x="1215" y="1790"/>
         </scene>
         <!--Comics Painting Tour List -->
         <scene sceneID="E5z-YP-NVM">
@@ -776,7 +776,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmr-aQ-Oea" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="984"/>
+            <point key="canvasLocation" x="2820" y="959"/>
         </scene>
         <!--Game View-->
         <scene sceneID="N6j-rM-e3B">
@@ -787,28 +787,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-V8-S5R">
-                                <rect key="frame" x="0.0" y="10" width="0.0" height="460"/>
+                                <rect key="frame" x="10" y="10" width="300" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-1n-MDy">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="460"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gnd-lN-95y">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="293"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="293"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-Yz-Ods">
-                                                <rect key="frame" x="0.0" y="318" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="318" width="300" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAp-lW-ly2">
-                                                <rect key="frame" x="0.0" y="343" width="0.0" height="17"/>
+                                                <rect key="frame" x="0.0" y="343" width="300" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scc-3S-ttJ">
-                                                <rect key="frame" x="0.0" y="385" width="0.0" height="25"/>
+                                                <rect key="frame" x="0.0" y="385" width="300" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="1mv-9w-giY"/>
                                                 </constraints>
@@ -818,7 +818,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-9F-isU">
-                                                <rect key="frame" x="0.0" y="435" width="0.0" height="25"/>
+                                                <rect key="frame" x="0.0" y="435" width="300" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="8wz-h0-zz1"/>
                                                 </constraints>
@@ -884,7 +884,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIY-5w-HfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="2565"/>
+            <point key="canvasLocation" x="1215" y="2565"/>
         </scene>
         <!--Victory !!!!-->
         <scene sceneID="ki5-Y1-O6j">
@@ -975,7 +975,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FF-lm-oCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="3389"/>
+            <point key="canvasLocation" x="1215" y="3378"/>
         </scene>
         <!--Picture Time-->
         <scene sceneID="1zE-Fs-dAR">
@@ -1070,7 +1070,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktm-Ip-Luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3714" y="2565"/>
+            <point key="canvasLocation" x="1974" y="2565"/>
         </scene>
         <!--Comics Painting tour map-->
         <scene sceneID="Atf-dg-Hib">
@@ -1103,7 +1103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pb0-91-6f1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3716" y="1790"/>
+            <point key="canvasLocation" x="2820" y="1790"/>
         </scene>
         <!--Title-->
         <scene sceneID="SpY-RC-B29">
@@ -1222,7 +1222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJT-sF-FNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4719" y="984"/>
+            <point key="canvasLocation" x="3675" y="959"/>
         </scene>
         <!--Brussel Comics Book Painting Tour-->
         <scene sceneID="zn2-lo-QSl">
@@ -1233,19 +1233,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-6q-BHk">
-                                <rect key="frame" x="0.0" y="64" width="0.0" height="416"/>
+                                <rect key="frame" x="16" y="64" width="288" height="416"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="VlM-dP-Pna">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="487"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="29667.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nar-MO-cZK">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="29180.5"/>
                                                 <string key="text">Welcome to the Brussels comics book tour Application. Please insert your email and your password to continue. If you don't have a account click on New User:</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zxh-DV-6FJ">
-                                                <rect key="frame" x="0.0" y="30" width="0.0" height="30"/>
+                                                <rect key="frame" x="0.0" y="29210.5" width="288" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLs-Uc-1SL">
                                                         <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
@@ -1254,7 +1255,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="jvdm@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dle-YC-QTa">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                        <rect key="frame" x="51" y="0.0" width="237" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -1262,7 +1263,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qVY-PH-98e">
-                                                <rect key="frame" x="0.0" y="90" width="0.0" height="30"/>
+                                                <rect key="frame" x="0.0" y="29270.5" width="288" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-Im-Xg0">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
@@ -1271,7 +1272,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="waphathipower16." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Zp-gr-GBc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                        <rect key="frame" x="84" y="0.0" width="204" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -1279,17 +1280,17 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vYZ-fp-JB9">
-                                                <rect key="frame" x="0.0" y="150" width="0.0" height="30"/>
+                                                <rect key="frame" x="0.0" y="29330.5" width="288" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czq-xr-mW4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
                                                         <state key="normal" title="Log In"/>
                                                         <connections>
                                                             <action selector="logInButton:" destination="XrU-ZJ-GWG" eventType="touchUpInside" id="VeU-ad-Icx"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpm-cl-6mT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                        <rect key="frame" x="144" y="0.0" width="144" height="30"/>
                                                         <state key="normal" title="New User"/>
                                                         <connections>
                                                             <action selector="newUserButton:" destination="XrU-ZJ-GWG" eventType="touchUpInside" id="Coe-iq-Jfy"/>
@@ -1298,7 +1299,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bd_dans_la_ville" translatesAutoresizingMaskIntoConstraints="NO" id="UaY-3m-Gqt">
-                                                <rect key="frame" x="0.0" y="210" width="0.0" height="277"/>
+                                                <rect key="frame" x="0.0" y="29390.5" width="288" height="277"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -1394,7 +1395,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWE-D8-Fxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="984"/>
+            <point key="canvasLocation" x="1976" y="959"/>
         </scene>
         <!--Tour Table Details-->
         <scene sceneID="9oA-gn-7UY">
@@ -1580,7 +1581,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEd-AS-EAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3713" y="123"/>
+            <point key="canvasLocation" x="2820" y="123"/>
         </scene>
         <!--Title-->
         <scene sceneID="VMM-S9-gF1">
@@ -1699,7 +1700,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfC-tA-ely" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4721" y="1790"/>
+            <point key="canvasLocation" x="3675" y="1790"/>
         </scene>
         <!--Title-->
         <scene sceneID="77J-Uh-QoF">

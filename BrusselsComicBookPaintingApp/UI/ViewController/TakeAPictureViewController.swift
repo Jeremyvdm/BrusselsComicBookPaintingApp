@@ -9,8 +9,13 @@
 import UIKit
 import AlamofireImage
 
-class TakeAPictureViewController: UIViewController, UIImagePickerControllerDelegate,
+protocol TakeAPictureViewControllerDelegate {
+    func passToNextPanitng(comicsPaintingIndex : Int)
+}
+
+class TakeaPictureViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
+    
     
     let imagePicker = UIImagePickerController()
     var delegate : TakeAPictureViewControllerDelegate?
@@ -42,11 +47,10 @@ UINavigationControllerDelegate {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if let delegate = self.delegate {
-            gameComicBookPaintingIndex += 1
-            delegate.nextComicBookPaintng(gameComicBookPaintingIndex : gameComicBookPaintingIndex)
+    override func didMove(toParentViewController parent: UIViewController?) {
+        super .didMove(toParentViewController: parent)
+        if let gamveVC = parent as? GameViewController{
+            delegate?.passToNextPanitng(comicsPaintingIndex: gameComicBookPaintingIndex)
         }
     }
     
@@ -76,7 +80,4 @@ UINavigationControllerDelegate {
     
 }
 
-protocol TakeAPictureViewControllerDelegate {
-    func nextComicBookPaintng(gameComicBookPaintingIndex : Int);
-}
 
