@@ -12,12 +12,14 @@ import CoreLocation
 class ComicBookPaintingTourTabBarController: UITabBarController {
     var playerListOfComicBookPaintings : [ComicsBookPainting] = []
     var currentUser : UserApp = UserApp()
-    var startingLocation = CLLocation()
+    var playerLocation = CLLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self as? UITabBarControllerDelegate
         // Do any additional setup after loading the view.
+        guard let lastPlayerLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation as? CLLocation else{return}
+        self.playerLocation = lastPlayerLocation
         setUpViewController()
     }
     
@@ -26,10 +28,10 @@ class ComicBookPaintingTourTabBarController: UITabBarController {
         guard let comicsBookPaintingTourInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "comicsBookPaintingTourInfoVC") as? ComicTourTableViewController, let comicsBookPaintingTourListVC = self.storyboard?.instantiateViewController(withIdentifier: "comicsBookPaintingTourListVC") as? ListOfPaintingTourTableViewController, let comicsBookPaintingTourMapVC = self.storyboard?.instantiateViewController(withIdentifier: "comicsBookPaintingTourMapVC") as? ComicBookPaintingTourMapViewController else{return}
         comicsBookPaintingTourInfoVC.playerListOfComicBookPaintings = playerListOfComicBookPaintings
         comicsBookPaintingTourInfoVC.currentUser = currentUser
+        comicsBookPaintingTourInfoVC.playerLocation = playerLocation
         comicsBookPaintingTourListVC.playerComicBooksList = playerListOfComicBookPaintings
-        comicsBookPaintingTourListVC.hideBackButton = true
         comicsBookPaintingTourMapVC.listOfComicBookPaintings = playerListOfComicBookPaintings
-        comicsBookPaintingTourMapVC.startingPointLocation = startingLocation
+        comicsBookPaintingTourMapVC.startingPointLocation = playerLocation
         viewControllers = [comicsBookPaintingTourInfoVC, comicsBookPaintingTourListVC, comicsBookPaintingTourMapVC]
     }
     

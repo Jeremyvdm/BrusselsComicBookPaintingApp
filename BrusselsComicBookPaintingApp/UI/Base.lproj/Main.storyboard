@@ -235,16 +235,16 @@
                         <sections>
                             <tableViewSection headerTitle=" " id="RpF-2x-8rT">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="137" id="kXR-fe-tgW">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="137"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="258" id="kXR-fe-tgW">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="258"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXR-fe-tgW" id="2TO-Jg-7G6">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="136.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="257.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-1b-x0p">
-                                                    <rect key="frame" x="16" y="11" width="288" height="115"/>
-                                                    <string key="text">Welcome to The Brussels comics painting Tour Initiation, please choose you the different option to personalise your Comics Book Paintings tour:</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-1b-x0p">
+                                                    <rect key="frame" x="16" y="11" width="288" height="236"/>
+                                                    <string key="text">Welcome to The Brussels comics painting Tour Initiation, please choose you the different option to personalise your Comics  Paintings tour, or, if you want to create your custon tour, go the Complete map and to add a painting select the Comics Painting on the map and press the + button when you are done just press the done Button in the navigation bar:</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -263,7 +263,7 @@
                             <tableViewSection headerTitle="Number of Comics Painting" id="VoU-Yy-NiG">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Umk-rA-bnJ">
-                                        <rect key="frame" x="0.0" y="193" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="314" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Umk-rA-bnJ" id="h0D-0a-mtJ">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -295,7 +295,7 @@
                             <tableViewSection headerTitle="Starting Location" id="jZT-Rc-qD5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w5S-kt-jOc">
-                                        <rect key="frame" x="0.0" y="265" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="386" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w5S-kt-jOc" id="iDe-CO-oak">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -327,7 +327,7 @@
                             <tableViewSection headerTitle="Radius distance starting location" id="Wmb-Y3-kML">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3JB-gk-BdJ">
-                                        <rect key="frame" x="0.0" y="337" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="458" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3JB-gk-BdJ" id="w03-yr-v3O">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -354,10 +354,10 @@
                             <tableViewSection headerTitle="Distance Between Paintings" id="4lG-gJ-mIc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="so7-bM-bw6">
-                                        <rect key="frame" x="0.0" y="409" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="530" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="so7-bM-bw6" id="ZUt-qX-saC">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tvU-bX-JRd">
@@ -380,11 +380,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Go To Comics Painting Tour" id="rPs-zh-2Re">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="283-Ex-jw2">
-                                        <rect key="frame" x="0.0" y="481" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="283-Ex-jw2">
+                                        <rect key="frame" x="0.0" y="602" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="283-Ex-jw2" id="9EM-Lk-cwr">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi9-50-TNC">
@@ -414,7 +414,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsw-t6-5Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="959"/>
+            <point key="canvasLocation" x="1215" y="958.75"/>
         </scene>
         <!--Comics Painting Complete Map-->
         <scene sceneID="cD7-d5-cPe">
@@ -443,11 +443,12 @@
                         <outlet property="completeMatNavBar" destination="a6p-CH-3dL" id="NkZ-QB-unw"/>
                         <outlet property="mapView" destination="INI-Eo-DKN" id="DPE-CE-NV3"/>
                         <segue destination="hpo-pv-sbf" kind="show" identifier="detailSegueFromCompleteMap" id="DN8-qX-Eyt"/>
+                        <segue destination="XdO-4B-TDa" kind="show" identifier="goToTourSegue" id="afx-iL-a8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTn-rr-uYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="124"/>
+            <point key="canvasLocation" x="1973" y="124"/>
         </scene>
         <!--User Information-->
         <scene sceneID="mjr-bD-js5">
@@ -707,7 +708,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-dV-W3K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="1790"/>
+            <point key="canvasLocation" x="1973" y="1790"/>
         </scene>
         <!--Comics Painting Tour List -->
         <scene sceneID="E5z-YP-NVM">
@@ -787,28 +788,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-V8-S5R">
-                                <rect key="frame" x="10" y="10" width="300" height="460"/>
+                                <rect key="frame" x="0.0" y="10" width="0.0" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hbd-1n-MDy">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="460"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gnd-lN-95y">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="293"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="293"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-Yz-Ods">
-                                                <rect key="frame" x="0.0" y="318" width="300" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="318" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAp-lW-ly2">
-                                                <rect key="frame" x="0.0" y="343" width="300" height="17"/>
+                                                <rect key="frame" x="0.0" y="343" width="0.0" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scc-3S-ttJ">
-                                                <rect key="frame" x="0.0" y="385" width="300" height="25"/>
+                                                <rect key="frame" x="0.0" y="385" width="0.0" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="1mv-9w-giY"/>
                                                 </constraints>
@@ -818,7 +819,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6U-9F-isU">
-                                                <rect key="frame" x="0.0" y="435" width="300" height="25"/>
+                                                <rect key="frame" x="0.0" y="435" width="0.0" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="8wz-h0-zz1"/>
                                                 </constraints>
@@ -884,7 +885,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIY-5w-HfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="2565"/>
+            <point key="canvasLocation" x="1974" y="2565"/>
         </scene>
         <!--Victory !!!!-->
         <scene sceneID="ki5-Y1-O6j">
@@ -975,7 +976,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FF-lm-oCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="3378"/>
+            <point key="canvasLocation" x="1973" y="3403"/>
         </scene>
         <!--Picture Time-->
         <scene sceneID="1zE-Fs-dAR">
@@ -1070,7 +1071,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ktm-Ip-Luy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="2565"/>
+            <point key="canvasLocation" x="2820" y="2565"/>
         </scene>
         <!--Comics Painting tour map-->
         <scene sceneID="Atf-dg-Hib">
@@ -1581,7 +1582,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEd-AS-EAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2820" y="123"/>
+            <point key="canvasLocation" x="2820" y="124"/>
         </scene>
         <!--Title-->
         <scene sceneID="VMM-S9-gF1">
@@ -1831,4 +1832,7 @@
         <image name="icons8-view-details-50" width="24" height="24"/>
         <image name="victoryImage" width="224" height="301"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="afx-iL-a8M"/>
+    </inferredMetricsTieBreakers>
 </document>

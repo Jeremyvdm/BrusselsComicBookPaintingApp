@@ -158,7 +158,6 @@ class ComicsTourInitiationTableViewController: UITableViewController, CLLocation
         if let comicBookPaintingTourTabVC = segue.destination as? ComicBookPaintingTourTabBarController{
             comicBookPaintingTourTabVC.playerListOfComicBookPaintings = fetchPlayerComicBookTour()
             comicBookPaintingTourTabVC.currentUser = currentUser
-            comicBookPaintingTourTabVC.startingLocation = startingPoint
         }
     }
     

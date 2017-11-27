@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.638221"
+            timestampString = "533160364.534053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.63935"
+            timestampString = "533160364.535013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -106,27 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicTourTableViewController.swift"
-            timestampString = "533159524.640357"
+            timestampString = "533484685.335374"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "createTheTextForDistanceLabel(listOfComicBookPaintingLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicTourTableViewController.swift"
-            timestampString = "533159524.640598"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "createTheTextForDistanceLabel(listOfComicBookPaintingLocation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicBookPaintingTourMapViewController.swift"
-            timestampString = "533159524.640787"
+            timestampString = "533484685.339615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -154,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicTourTableViewController.swift"
-            timestampString = "533159524.640948"
+            timestampString = "533484685.339752"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "createTheTextForDistanceLabel(listOfComicBookPaintingLocation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicTourTableViewController.swift"
-            timestampString = "533159524.641071"
+            timestampString = "533484685.341164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "createTheTextForDistanceLabel(listOfComicBookPaintingLocation:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.641191"
+            timestampString = "533160364.536716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
@@ -234,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/TakeAPictureViewController.swift"
-            timestampString = "533159524.641947"
+            timestampString = "533160364.537446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -250,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/TakeAPictureViewController.swift"
-            timestampString = "533159524.642137"
+            timestampString = "533160364.537634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -266,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.642423"
+            timestampString = "533160364.537803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -282,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.643064"
+            timestampString = "533160364.538447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -298,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.64375"
+            timestampString = "533160364.5391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -314,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/VictoryViewController.swift"
-            timestampString = "533159524.644397"
+            timestampString = "533160364.539886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -330,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.644596"
+            timestampString = "533160364.540083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -378,7 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.645359"
+            timestampString = "533160364.540809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
@@ -394,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.64602"
+            timestampString = "533160364.541676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -410,7 +394,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/GameViewController.swift"
-            timestampString = "533159524.646645"
+            timestampString = "533160364.54221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
@@ -490,7 +474,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsBookPaintingTourItitiationTabBarController.swift"
-            timestampString = "533159524.647454"
+            timestampString = "533484685.34325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -506,12 +490,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
-            timestampString = "533159524.64764"
+            timestampString = "533484685.343499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -522,13 +506,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
-            timestampString = "533159524.647811"
+            timestampString = "533484685.343634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "ComicsPaintingMapViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -554,7 +538,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsBookPaintingTourItitiationTabBarController.swift"
-            timestampString = "533159524.648035"
+            timestampString = "533484685.34377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -569,13 +553,77 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicTourTableViewController.swift"
-            timestampString = "533159524.648208"
+            filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
+            timestampString = "533484685.343839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrusselsComicBookPaintingApp.ComicsPaintingMapViewController.prepare(for: __ObjC.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "BrusselsComicBookPaintingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyvandermeersch/Desktop/mobile_app_dev/formation_IOS/IphoneProject/BrusselsComicBookPaintingApp/BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
+                  timestampString = "533480592.325401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BrusselsComicBookPaintingApp.ComicsPaintingMapViewController.prepare(for: __ObjC.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
+                  moduleName = "BrusselsComicBookPaintingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jeremyvandermeersch/Desktop/mobile_app_dev/formation_IOS/IphoneProject/BrusselsComicBookPaintingApp/BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
+                  timestampString = "533480592.333315"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "122"
+                  endingLineNumber = "122"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
+            timestampString = "533484685.343921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "mapView(_:annotationView:calloutAccessoryControlTapped:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrusselsComicBookPaintingApp/UI/ViewController/ComicsPaintingMapViewController.swift"
+            timestampString = "533484685.344034"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "fetchPlayerComicBookTour()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

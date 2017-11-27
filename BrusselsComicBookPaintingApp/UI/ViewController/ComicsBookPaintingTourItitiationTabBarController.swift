@@ -51,7 +51,9 @@ class ComicsBookPaintingTourItitiationTabBarController: UITabBarController {
     func configuretheViewController(user : UserApp, ListOfAllComicBookPaintings : [ComicsBookPainting]){
         guard let comicBookPaintingTourIntitationVC = self.storyboard?.instantiateViewController(withIdentifier: "comicBookTourInitiationVC") as? ComicsTourInitiationTableViewController, let userInformationTVC = self.storyboard?.instantiateViewController(withIdentifier: "userInfoVC") as? UserInformationTableViewController, let comicBookPaintingCompleteMapVC = self.storyboard?.instantiateViewController(withIdentifier: "comicsBookPaintingCompleteMapVC") as? ComicsPaintingMapViewController else {return}
         comicBookPaintingTourIntitationVC.ListOfAllComicPaintings = ListOfAllComicBookPaintings
+        comicBookPaintingTourIntitationVC.currentUser = user
         comicBookPaintingCompleteMapVC.comicBookPaintings = ListOfAllComicBookPaintings
+        comicBookPaintingCompleteMapVC.currentUser = user
         userInformationTVC.allTheComicBookPaintings = ListOfAllComicBookPaintings
         userInformationTVC.currentUser = user
         viewControllers = [comicBookPaintingTourIntitationVC, userInformationTVC, comicBookPaintingCompleteMapVC]

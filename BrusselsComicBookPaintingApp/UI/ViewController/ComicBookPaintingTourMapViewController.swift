@@ -95,8 +95,8 @@ class ComicBookPaintingTourMapViewController: UIViewController, CLLocationManage
     
     // will draw the path between the different pin
     private func drawPathBetweenComicBookPaintingLocation(listOfComicBookPaintingLocation : [CLLocation]){
-        var comicBookPaintingLocationA = listOfComicBookPaintingLocation[0]
-        for comicBookPaintingLocationB in listOfComicBookPaintingLocation[1...listOfComicBookPaintingLocation.count-1]{
+        var comicBookPaintingLocationA = startingPointLocation
+        for comicBookPaintingLocationB in listOfComicBookPaintingLocation[0...listOfComicBookPaintingLocation.count-1]{
             let directionRequest = MKDirectionsRequest()
             directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationA.coordinate))
             directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationB.coordinate))

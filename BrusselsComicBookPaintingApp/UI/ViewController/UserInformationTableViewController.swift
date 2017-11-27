@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class UserInformationTableViewController: UITableViewController {
     // MARK: - variable declaration
@@ -17,7 +18,6 @@ class UserInformationTableViewController: UITableViewController {
     var listOfUserInformation : [String : String] = [:]
     var listOfDictionnaryToDisplay : [String : [String : Any]] = [:]
     var listOfComicsBookPainting : [ComicsBookPainting] = []
-    
     
     // MARK: - view item declaration and view item action
     @IBOutlet var userIformationTableView: UITableView!
@@ -145,6 +145,8 @@ class UserInformationTableViewController: UITableViewController {
         listOfComicsBookPainting = fetchTheListOfComicBooksPaintingsFromDictionary(index: indexPath.row)
         performSegue(withIdentifier: "showTourDetailSegue", sender: Any?.self)
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let listTourDetailVC = segue.destination as? ListOfPaintingTourTableViewController{

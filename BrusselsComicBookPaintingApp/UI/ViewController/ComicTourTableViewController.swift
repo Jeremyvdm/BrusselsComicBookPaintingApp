@@ -10,14 +10,15 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ComicTourTableViewController: UITableViewController {
+class ComicTourTableViewController: UITableViewController, CLLocationManagerDelegate {
     // MARK: - variable declaration
     var comicBookTourName : String = ""
     var totalDistance : Double = 0.0
-    var startingLocation = CLLocation()
     var playerListOfComicBookPaintings : [ComicsBookPainting] = []
     var orderPlayerListOfComicBookPaintings : [ComicsBookPainting] = []
     var currentUser = UserApp()
+    var locationManager = CLLocationManager()
+    var playerLocation = CLLocation()
     
     // MARK: - view item declaration and view item action
     @IBOutlet weak var comicTourNameTextField: UITextField!
@@ -105,10 +106,10 @@ class ComicTourTableViewController: UITableViewController {
     }
     
     private func createTheTextForDistanceLabel(listOfComicBookPaintingLocation : [CLLocation]){
-        var comicBookPaintingLocationA = listOfComicBookPaintingLocation[0]
+        var comicBookPaintingLocationA = playerLocation
         var totalTourDistance : Double = 0.00
         var count = 0
-        for comicBookPaintingLocationB in listOfComicBookPaintingLocation[1...listOfComicBookPaintingLocation.count-1]{
+        for comicBookPaintingLocationB in listOfComicBookPaintingLocation[0...listOfComicBookPaintingLocation.count-1]{
             let directionRequest = MKDirectionsRequest()
             directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationA.coordinate))
             directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: comicBookPaintingLocationB.coordinate))
@@ -118,7 +119,7 @@ class ComicTourTableViewController: UITableViewController {
                 guard let route = response?.routes.first else{return}
                 totalTourDistance += route.distance
                 count += 1
-                if(count == self.playerListOfComicBookPaintings.count - 1){
+                if(count == self.playerListOfComicBookPaintings.count){
                     let totalDistanceDiv1000 = totalTourDistance/1000
                     let totalDistanceToDisplay = (totalDistanceDiv1000*100).rounded()/100
                     self.comicBookTourPaintingInfoLabel.text = "The comicbook Painting tour has \(self.playerListOfComicBookPaintings.count) Painting and the total distance of the tour is \(totalDistanceToDisplay) km."
@@ -135,7 +136,7 @@ class ComicTourTableViewController: UITableViewController {
     
     // will create the list of the comic book painting that will be order by distance and calculate the total distance of the tour
     func orderTheListOfComicBookPaintings(){
-        let startPointLocation = CLLocationCoordinate2D(latitude: startingLocation.coordinate.latitude, longitude: startingLocation.coordinate.longitude)
+        let startPointLocation = CLLocationCoordinate2D(latitude: playerLocation.coordinate.latitude, longitude: playerLocation.coordinate.longitude)
         let limit = playerListOfComicBookPaintings.count
         let listOfComicBookPaintingLocationServiceController = convertListOfComicBookPaintingInListOfLocationController(listOfComicBookPaintings: playerListOfComicBookPaintings)
         let orderListOfComicBookPaintingLocationServiceController = orderTheComicBookPaintingByDistance(fromStartPoint: startPointLocation, betweenComicBookPaintingLocation: listOfComicBookPaintingLocationServiceController, limitTo: limit, course: [])
@@ -143,6 +144,7 @@ class ComicTourTableViewController: UITableViewController {
         let listOfComicBookPaintingLocation = obtainTheListOfComicBookPaintingLocation(listOfComicBookPaintings: orderPlayerListOfComicBookPaintings)
         createTheTextForDistanceLabel(listOfComicBookPaintingLocation: listOfComicBookPaintingLocation)
     }
+    
     
     // MARK: - basic function of the view controller
     override func viewDidLoad() {
