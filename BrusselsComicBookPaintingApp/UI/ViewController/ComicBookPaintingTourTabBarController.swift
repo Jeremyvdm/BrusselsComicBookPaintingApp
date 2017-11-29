@@ -18,7 +18,7 @@ class ComicBookPaintingTourTabBarController: UITabBarController {
         super.viewDidLoad()
         self.delegate = self as? UITabBarControllerDelegate
         // Do any additional setup after loading the view.
-        guard let lastPlayerLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation as? CLLocation else{return}
+        guard let lastPlayerLocation = (UIApplication.shared.delegate as! AppDelegate).lastSavedLocation else{return}
         self.playerLocation = lastPlayerLocation
         setUpViewController()
     }

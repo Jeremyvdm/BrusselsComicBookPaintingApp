@@ -92,21 +92,23 @@ class FirebaseController {
         let numberOfComicBookPaintingsTour = listOfComicsPaintingsToursJsonArray.count
         for i in 0 ..< numberOfComicBookPaintingsTour{
             let comicBookPaintingTourJson : JSON = listOfComicsPaintingsToursJsonArray[i]
-            let comicBookPaintingTour  : ComicBooksPaintingsTour = getComicBookPaintingsTourFromJson(comicBookPaintingTourJson : comicBookPaintingTourJson)
+            let comicBookPaintingTour  : ComicBooksPaintingsTour = getComicBookPaintingsTourFromJson(comicBookPaintingTourJson : comicBookPaintingTourJson, dbId : i)
             listOfComicBookPaintingsTour.append(comicBookPaintingTour)
         }
         return listOfComicBookPaintingsTour
     }
     
     
-    func getComicBookPaintingsTourFromJson(comicBookPaintingTourJson : JSON) -> ComicBooksPaintingsTour{
+    func getComicBookPaintingsTourFromJson(comicBookPaintingTourJson : JSON, dbId : Int) -> ComicBooksPaintingsTour{
         var comicBookPaintingsTour : ComicBooksPaintingsTour = ComicBooksPaintingsTour()
+        let dbIdString : String = "\(dbId)"
         guard let comicBookPaintingsTourName = comicBookPaintingTourJson["comicBookPaintingsTourName"].string else{
             return ComicBooksPaintingsTour()}
         var listOfComicBookPaintingTitle : [String] = []
         for value in comicBookPaintingTourJson["listOfComicBookPaintingsTitle"].arrayValue{
             listOfComicBookPaintingTitle.append(value.stringValue)
         }
+        comicBookPaintingsTour.dbId = dbIdString
         comicBookPaintingsTour.comicBooksPaintingsTourName = comicBookPaintingsTourName
         comicBookPaintingsTour.listOfComicBookPaintingsTitle = listOfComicBookPaintingTitle
         return comicBookPaintingsTour

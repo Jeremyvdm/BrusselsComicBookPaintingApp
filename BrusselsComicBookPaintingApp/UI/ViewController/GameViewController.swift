@@ -20,7 +20,8 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     var locationManager = CLLocationManager()
     var numbeerOfComicBOokPaintingPassed = 0
     var numbeerOfComicBOokPaintingReached = 0
-    
+    var oldPlayerLocation = CLLocation()
+    var oldPlayerLocationCicurlarRegion = CLCircularRegion()
     var currentPlayerLocation: CLLocation?{
         didSet{
             playTheGameAndGetTheDisanceTF(playerCurrentLocation: self.currentPlayerLocation!, gameComicBookPainting: gameComicBookPainting)
@@ -113,6 +114,7 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
     func playTheGameAndGetTheDisanceTF(playerCurrentLocation : CLLocation, gameComicBookPainting : ComicsBookPainting){
         let gameComicBookPaintingLocation = CLLocation(latitude: gameComicBookPainting.lat, longitude: gameComicBookPainting.lng)
         var walkingDistanceToThePainting = 0.00
+        let comicsPaintingRegion = CLCircularRegion(center: gameComicBookPaintingLocation.coordinate, radius: 6, identifier: "gameComicBookPaitingGeoFencing")
         let directionRequest = MKDirectionsRequest()
         directionRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: playerCurrentLocation.coordinate))
         directionRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: gameComicBookPaintingLocation.coordinate))
@@ -129,12 +131,16 @@ class GameViewController: UIViewController, TakeAPictureViewControllerDelegate, 
                 let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
                 self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
                 self.firstDistance = walkingDistanceToThePaintingRounded
-            }else if(walkingDistanceToThePaintingRounded) >= (self.firstDistance - 20) || (walkingDistanceToThePaintingRounded) <= (self.firstDistance + 20) {
+                self.oldPlayerLocation = self.currentPlayerLocation!
+                self.oldPlayerLocationCicurlarRegion = CLCircularRegion(center: self.oldPlayerLocation.coordinate, radius: 20, identifier: "geoFencingforComicsPainting")
+            }else if (self.oldPlayerLocationCicurlarRegion.contains(playerCurrentLocation.coordinate)) == false {
                 AppDelegate.DisplayInfo(distance: walkingDistanceToThePaintingRounded, fromNewLocation: playerCurrentLocation)
                 let gameComicBookPaintingDistanceText = " you are at \(walkingDistanceToThePaintingRounded) km from the painting"
                 self.comicBookPaintnigInfoDistanceLabel.text = gameComicBookPaintingDistanceText
+                self.oldPlayerLocation = playerCurrentLocation
                 self.firstDistance = walkingDistanceToThePaintingRounded
-            }else if walkingDistanceToThePaintingRounded < 0.06{
+                self.oldPlayerLocationCicurlarRegion = CLCircularRegion(center: self.oldPlayerLocation.coordinate, radius: 20, identifier: "geoFencingforComicsPainting")
+            }else if comicsPaintingRegion.contains(playerCurrentLocation.coordinate){
                 self.gameAlerContinuePicture(title: "Take a Picture", andMessage: "would you like to take a picture of the painting?")
             }
         })

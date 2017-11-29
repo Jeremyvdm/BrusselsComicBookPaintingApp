@@ -14,10 +14,13 @@ class UserInformationTableViewController: UITableViewController {
     // MARK: - variable declaration
     var allTheComicBookPaintings : [ComicsBookPainting] = []
     var currentUser : UserApp = UserApp()
+    var PlayerListOfComicBookPaintingTour : [ComicBooksPaintingsTour] = []
     var listOfUserComicBookPaintingTourDictionnary :  [String : [String]] = [:]
     var listOfUserInformation : [String : String] = [:]
     var listOfDictionnaryToDisplay : [String : [String : Any]] = [:]
     var listOfComicsBookPainting : [ComicsBookPainting] = []
+    
+    var currentUserComicsTourDBRef = Database.database().reference().child("userApp").child(Auth.auth().currentUser!.uid).child("comicBookPaintingsTour")
     
     // MARK: - view item declaration and view item action
     @IBOutlet var userIformationTableView: UITableView!
@@ -46,7 +49,7 @@ class UserInformationTableViewController: UITableViewController {
         listOfUserInformation["last Name "] = currentUser.lastName
         listOfUserInformation["email "] = currentUser.email
         listOfUserInformation["address "] = currentUser.address
-        let PlayerListOfComicBookPaintingTour = currentUser.listOfComicBookPaintingsTours
+        PlayerListOfComicBookPaintingTour = currentUser.listOfComicBookPaintingsTours
         for comicBookPaintingTour in PlayerListOfComicBookPaintingTour{
             listOfUserComicBookPaintingTourDictionnary[comicBookPaintingTour.comicBooksPaintingsTourName] = comicBookPaintingTour.listOfComicBookPaintingsTitle
         }
@@ -116,7 +119,20 @@ class UserInformationTableViewController: UITableViewController {
     }
     
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let arrayOfTourNames : [String] = Array(listOfUserComicBookPaintingTourDictionnary.keys)
+            currentUserComicsTourDBRef.child(PlayerListOfComicBookPaintingTour[indexPath.row].dbId).removeValue(completionBlock: { (err, dbref) in
+                if err == nil {
+                    let tourName = arrayOfTourNames[indexPath.row]
+                    self.listOfUserComicBookPaintingTourDictionnary.removeValue(forKey: tourName)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            })
+        }
+    }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell

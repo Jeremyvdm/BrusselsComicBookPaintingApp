@@ -112,6 +112,11 @@ class ComicsPaintingMapViewController : UIViewController, CLLocationManagerDeleg
         self.parent?.navigationItem.rightBarButtonItem = rightBarButton
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.parent?.navigationItem.rightBarButtonItem = nil
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -144,6 +149,7 @@ class ComicsPaintingMapViewController : UIViewController, CLLocationManagerDeleg
             toastLabel.removeFromSuperview()
         })
     }
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
